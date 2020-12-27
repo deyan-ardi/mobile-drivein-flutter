@@ -74,6 +74,11 @@ flutter:
     - assets/images/img24.png
     - assets/images/img25.png
     - assets/images/star.png
+    - assets/images/star2.png
+    - assets/images/comment.png
+    - assets/images/nearby1.png
+    - assets/images/nearby2.png
+    - assets/images/nearby3.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

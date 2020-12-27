@@ -34,7 +34,7 @@ class Events extends StatelessWidget {
               ),
             ),
           ),
-          Pinned.fromSize(
+       Pinned.fromSize(
             bounds: Rect.fromLTWH(19.0, 29.0, 128.0, 33.0),
             size: Size(414.0, 896.0),
             pinLeft: true,
@@ -45,11 +45,11 @@ class Events extends StatelessWidget {
               'Hey Missel,',
               style: TextStyle(
                 fontFamily: 'Segoe UI',
-                fontSize: 25,
+                fontSize: 20,
                 color: const Color(0xffffffff),
                 fontWeight: FontWeight.w600,
               ),
-              textAlign: TextAlign.center,
+              textAlign: TextAlign.left,
             ),
           ),
           Pinned.fromSize(
@@ -66,7 +66,7 @@ class Events extends StatelessWidget {
                 fontSize: 17,
                 color: const Color(0xffffffff),
               ),
-              textAlign: TextAlign.center,
+              textAlign: TextAlign.left,
             ),
           ),
           Pinned.fromSize(
@@ -87,22 +87,15 @@ class Events extends StatelessWidget {
                   pinBottom: true,
                   child: Stack(
                     children: <Widget>[
-                      Pinned.fromSize(
-                        bounds: Rect.fromLTWH(-7.8, -15.4, 138.4, 207.5),
-                        size: Size(132.0, 132.0),
-                        pinLeft: true,
-                        pinRight: true,
-                        pinTop: true,
-                        pinBottom: true,
-                        child: Container(
+                      Container(
                           decoration: BoxDecoration(
                             image: DecorationImage(
-                              image: const AssetImage(''),
+                              image: const AssetImage('assets/images/img25.png'),
                               fit: BoxFit.fill,
                             ),
                           ),
                         ),
-                      ),
+                      
                       Pinned.fromSize(
                         bounds: Rect.fromLTWH(0.0, 0.0, 132.0, 132.0),
                         size: Size(132.0, 132.0),
@@ -123,8 +116,8 @@ class Events extends StatelessWidget {
               ],
             ),
           ),
-          Pinned.fromSize(
-            bounds: Rect.fromLTWH(38.0, 178.0, 335.0, 57.0),
+         Pinned.fromSize(
+            bounds: Rect.fromLTWH(38.0, 200.0, 335.0, 57.0),
             size: Size(414.0, 896.0),
             pinLeft: true,
             pinRight: true,
@@ -137,8 +130,8 @@ class Events extends StatelessWidget {
               ),
             ),
           ),
-          Pinned.fromSize(
-            bounds: Rect.fromLTWH(97.0, 190.0, 64.0, 30.0),
+           Pinned.fromSize(
+            bounds: Rect.fromLTWH(97.0, 215.0, 64.0, 30.0),
             size: Size(414.0, 896.0),
             fixedWidth: true,
             fixedHeight: true,
@@ -146,14 +139,14 @@ class Events extends StatelessWidget {
               'Search',
               style: TextStyle(
                 fontFamily: 'Nirmala UI',
-                fontSize: 22,
+                fontSize: 20,
                 color: const Color(0x4f707070),
               ),
               textAlign: TextAlign.center,
             ),
           ),
-          Pinned.fromSize(
-            bounds: Rect.fromLTWH(58.0, 190.0, 33.0, 33.0),
+         Pinned.fromSize(
+            bounds: Rect.fromLTWH(58.0, 210.0, 33.0, 33.0),
             size: Size(414.0, 896.0),
             pinLeft: true,
             fixedWidth: true,
@@ -161,7 +154,7 @@ class Events extends StatelessWidget {
             child: Container(
               decoration: BoxDecoration(
                 image: DecorationImage(
-                  image: const AssetImage(''),
+                  image: const AssetImage('assets/images/img24.png'),
                   fit: BoxFit.cover,
                   colorFilter: new ColorFilter.mode(
                       Colors.black.withOpacity(0.52), BlendMode.dstIn),
@@ -226,10 +219,10 @@ class Events extends StatelessWidget {
             fixedWidth: true,
             fixedHeight: true,
             child: Text(
-              'carmudi have a special promo\nfor you',
+              'Carmudi have a special promo\nfor you',
               style: TextStyle(
                 fontFamily: 'Segoe UI',
-                fontSize: 20,
+                fontSize: 18,
                 color: const Color(0xff655757),
                 fontWeight: FontWeight.w600,
               ),
@@ -264,7 +257,7 @@ class Events extends StatelessWidget {
               'Cahya Mengemudi have a \nspecial promo for you',
               style: TextStyle(
                 fontFamily: 'Segoe UI',
-                fontSize: 20,
+                fontSize: 18,
                 color: const Color(0xff655757),
                 fontWeight: FontWeight.w600,
               ),
@@ -281,7 +274,7 @@ class Events extends StatelessWidget {
               'YURADRIVE have a special\npromo for you',
               style: TextStyle(
                 fontFamily: 'Segoe UI',
-                fontSize: 20,
+                fontSize: 18,
                 color: const Color(0xff655757),
                 fontWeight: FontWeight.w600,
               ),

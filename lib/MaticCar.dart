@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
-import './Booking.dart';
-import 'package:adobe_xd/page_link.dart';
 import './Home.dart';
+import 'package:adobe_xd/page_link.dart';
 import './Profile.dart';
 import './NotificationPage.dart';
-import './ManualCar.dart';
+import './Car.dart';
+import './Booking.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class MaticCar extends StatelessWidget {
@@ -18,25 +18,6 @@ class MaticCar extends StatelessWidget {
       backgroundColor: const Color(0xffffffff),
       body: Stack(
         children: <Widget>[
-          Pinned.fromSize(
-            bounds: Rect.fromLTWH(32.0, 371.0, 351.0, 237.0),
-            size: Size(414.0, 896.0),
-            pinLeft: true,
-            pinRight: true,
-            fixedHeight: true,
-            child:
-                // Adobe XD layer: 'Untitled-2' (shape)
-                Container(
-              decoration: BoxDecoration(
-                image: DecorationImage(
-                  image: const AssetImage('assets/images/img2.png'),
-                  fit: BoxFit.fill,
-                  colorFilter: new ColorFilter.mode(
-                      Colors.black.withOpacity(0.13), BlendMode.dstIn),
-                ),
-              ),
-            ),
-          ),
           Pinned.fromSize(
             bounds: Rect.fromLTWH(0.0, 0.0, 414.0, 216.0),
             size: Size(414.0, 896.0),
@@ -69,248 +50,22 @@ class MaticCar extends StatelessWidget {
             ),
           ),
           Pinned.fromSize(
-            bounds: Rect.fromLTWH(59.0, 306.0, 283.0, 136.0),
+            bounds: Rect.fromLTWH(25.0, 372.0, 351.0, 237.0),
             size: Size(414.0, 896.0),
             pinLeft: true,
-            fixedWidth: true,
+            pinRight: true,
             fixedHeight: true,
-            child: PageLink(
-              links: [
-                PageLinkInfo(
-                  transition: LinkTransition.Fade,
-                  ease: Curves.easeOut,
-                  duration: 0.3,
-                  pageBuilder: () => Booking(),
-                ),
-              ],
-              child: Container(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(5.0),
-                  color: const Color(0xff254da1),
+            child:
+                // Adobe XD layer: 'Untitled-2' (shape)
+                Container(
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: const AssetImage('assets/images/img2.png'),
+                  fit: BoxFit.fill,
+                  colorFilter: new ColorFilter.mode(
+                      Colors.black.withOpacity(0.13), BlendMode.dstIn),
                 ),
               ),
-            ),
-          ),
-          Pinned.fromSize(
-            bounds: Rect.fromLTWH(134.0, 284.0, 146.0, 44.0),
-            size: Size(414.0, 896.0),
-            fixedWidth: true,
-            fixedHeight: true,
-            child: Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(15.0),
-                color: const Color(0xffffffff),
-                border: Border.all(width: 1.0, color: const Color(0xff707070)),
-                boxShadow: [
-                  BoxShadow(
-                    color: const Color(0x29000000),
-                    offset: Offset(0, 3),
-                    blurRadius: 6,
-                  ),
-                ],
-              ),
-            ),
-          ),
-          Pinned.fromSize(
-            bounds: Rect.fromLTWH(171.0, 292.0, 72.0, 27.0),
-            size: Size(414.0, 896.0),
-            fixedWidth: true,
-            fixedHeight: true,
-            child: Text(
-              'PAKET 1',
-              style: TextStyle(
-                fontFamily: 'Segoe UI',
-                fontSize: 20,
-                color: const Color(0xb8707070),
-              ),
-              textAlign: TextAlign.center,
-            ),
-          ),
-          Pinned.fromSize(
-            bounds: Rect.fromLTWH(59.0, 472.0, 283.0, 136.0),
-            size: Size(414.0, 896.0),
-            pinLeft: true,
-            fixedWidth: true,
-            fixedHeight: true,
-            child: Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(5.0),
-                color: const Color(0xff254da1),
-              ),
-            ),
-          ),
-          Pinned.fromSize(
-            bounds: Rect.fromLTWH(134.0, 459.0, 146.0, 44.0),
-            size: Size(414.0, 896.0),
-            fixedWidth: true,
-            fixedHeight: true,
-            child: Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(15.0),
-                color: const Color(0xffffffff),
-                border: Border.all(width: 1.0, color: const Color(0xff707070)),
-                boxShadow: [
-                  BoxShadow(
-                    color: const Color(0x29000000),
-                    offset: Offset(0, 3),
-                    blurRadius: 6,
-                  ),
-                ],
-              ),
-            ),
-          ),
-          Pinned.fromSize(
-            bounds: Rect.fromLTWH(171.0, 467.0, 72.0, 27.0),
-            size: Size(414.0, 896.0),
-            fixedWidth: true,
-            fixedHeight: true,
-            child: Text(
-              'PAKET 2',
-              style: TextStyle(
-                fontFamily: 'Segoe UI',
-                fontSize: 20,
-                color: const Color(0xb8707070),
-              ),
-              textAlign: TextAlign.center,
-            ),
-          ),
-          Pinned.fromSize(
-            bounds: Rect.fromLTWH(59.0, 640.0, 283.0, 136.0),
-            size: Size(414.0, 896.0),
-            pinLeft: true,
-            pinBottom: true,
-            fixedWidth: true,
-            fixedHeight: true,
-            child: Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(5.0),
-                color: const Color(0xff254da1),
-              ),
-            ),
-          ),
-          Pinned.fromSize(
-            bounds: Rect.fromLTWH(134.0, 627.0, 146.0, 44.0),
-            size: Size(414.0, 896.0),
-            fixedWidth: true,
-            fixedHeight: true,
-            child: Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(15.0),
-                color: const Color(0xffffffff),
-                border: Border.all(width: 1.0, color: const Color(0xff707070)),
-                boxShadow: [
-                  BoxShadow(
-                    color: const Color(0x29000000),
-                    offset: Offset(0, 3),
-                    blurRadius: 6,
-                  ),
-                ],
-              ),
-            ),
-          ),
-          Pinned.fromSize(
-            bounds: Rect.fromLTWH(165.0, 636.0, 72.0, 27.0),
-            size: Size(414.0, 896.0),
-            fixedWidth: true,
-            fixedHeight: true,
-            child: Text(
-              'PAKET 3',
-              style: TextStyle(
-                fontFamily: 'Segoe UI',
-                fontSize: 20,
-                color: const Color(0xb8707070),
-              ),
-              textAlign: TextAlign.center,
-            ),
-          ),
-          Pinned.fromSize(
-            bounds: Rect.fromLTWH(94.0, 345.0, 120.0, 27.0),
-            size: Size(414.0, 896.0),
-            fixedWidth: true,
-            fixedHeight: true,
-            child: Text(
-              '      Rp 50.000',
-              style: TextStyle(
-                fontFamily: 'Segoe UI',
-                fontSize: 20,
-                color: const Color(0xffffffff),
-              ),
-              textAlign: TextAlign.center,
-            ),
-          ),
-          Pinned.fromSize(
-            bounds: Rect.fromLTWH(125.0, 379.0, 110.0, 27.0),
-            size: Size(414.0, 896.0),
-            fixedWidth: true,
-            fixedHeight: true,
-            child: Text(
-              '1 x 60 Menit',
-              style: TextStyle(
-                fontFamily: 'Segoe UI',
-                fontSize: 20,
-                color: const Color(0xffffffff),
-              ),
-              textAlign: TextAlign.center,
-            ),
-          ),
-          Pinned.fromSize(
-            bounds: Rect.fromLTWH(90.0, 513.0, 180.0, 27.0),
-            size: Size(414.0, 896.0),
-            fixedWidth: true,
-            fixedHeight: true,
-            child: Text(
-              '      Rp 150.000 ( 3x )',
-              style: TextStyle(
-                fontFamily: 'Segoe UI',
-                fontSize: 20,
-                color: const Color(0xffffffff),
-              ),
-              textAlign: TextAlign.center,
-            ),
-          ),
-          Pinned.fromSize(
-            bounds: Rect.fromLTWH(121.0, 547.0, 110.0, 27.0),
-            size: Size(414.0, 896.0),
-            fixedWidth: true,
-            fixedHeight: true,
-            child: Text(
-              '1 x 70 Menit',
-              style: TextStyle(
-                fontFamily: 'Segoe UI',
-                fontSize: 20,
-                color: const Color(0xffffffff),
-              ),
-              textAlign: TextAlign.center,
-            ),
-          ),
-          Pinned.fromSize(
-            bounds: Rect.fromLTWH(94.0, 681.0, 180.0, 27.0),
-            size: Size(414.0, 896.0),
-            fixedWidth: true,
-            fixedHeight: true,
-            child: Text(
-              '      Rp 250.000 ( 5x )',
-              style: TextStyle(
-                fontFamily: 'Segoe UI',
-                fontSize: 20,
-                color: const Color(0xffffffff),
-              ),
-              textAlign: TextAlign.center,
-            ),
-          ),
-          Pinned.fromSize(
-            bounds: Rect.fromLTWH(125.0, 715.0, 110.0, 27.0),
-            size: Size(414.0, 896.0),
-            fixedWidth: true,
-            fixedHeight: true,
-            child: Text(
-              '1 x 80 Menit',
-              style: TextStyle(
-                fontFamily: 'Segoe UI',
-                fontSize: 20,
-                color: const Color(0xffffffff),
-              ),
-              textAlign: TextAlign.center,
             ),
           ),
           Pinned.fromSize(
@@ -326,7 +81,7 @@ class MaticCar extends StatelessWidget {
             ),
           ),
           Pinned.fromSize(
-            bounds: Rect.fromLTWH(98.0, 194.0, 218.0, 40.0),
+            bounds: Rect.fromLTWH(80.0, 194.0, 254.0, 40.0),
             size: Size(414.0, 896.0),
             fixedWidth: true,
             fixedHeight: true,
@@ -453,7 +208,7 @@ class MaticCar extends StatelessWidget {
                   transition: LinkTransition.Fade,
                   ease: Curves.easeOut,
                   duration: 0.3,
-                  pageBuilder: () => ManualCar(),
+                  pageBuilder: () => Car(),
                 ),
               ],
               child: SvgPicture.string(
@@ -464,7 +219,253 @@ class MaticCar extends StatelessWidget {
             ),
           ),
           Pinned.fromSize(
-            bounds: Rect.fromLTWH(88.0, 353.0, 10.0, 17.8),
+            bounds: Rect.fromLTWH(59.0, 306.0, 283.0, 136.0),
+            size: Size(414.0, 896.0),
+            pinLeft: true,
+            fixedWidth: true,
+            fixedHeight: true,
+            child: PageLink(
+              links: [
+                PageLinkInfo(
+                  transition: LinkTransition.Fade,
+                  ease: Curves.easeOut,
+                  duration: 0.3,
+                  pageBuilder: () => Booking(),
+                ),
+              ],
+              child: Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(5.0),
+                  color: const Color(0xff254da1),
+                ),
+              ),
+            ),
+          ),
+          Pinned.fromSize(
+            bounds: Rect.fromLTWH(134.0, 284.0, 146.0, 44.0),
+            size: Size(414.0, 896.0),
+            fixedWidth: true,
+            fixedHeight: true,
+            child: Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(15.0),
+                color: const Color(0xffffffff),
+                border: Border.all(width: 1.0, color: const Color(0xff707070)),
+                boxShadow: [
+                  BoxShadow(
+                    color: const Color(0x29000000),
+                    offset: Offset(0, 3),
+                    blurRadius: 6,
+                  ),
+                ],
+              ),
+            ),
+          ),
+          Pinned.fromSize(
+            bounds: Rect.fromLTWH(171.0, 292.0, 72.0, 27.0),
+            size: Size(414.0, 896.0),
+            fixedWidth: true,
+            fixedHeight: true,
+            child: Text(
+              'PAKET 1',
+              style: TextStyle(
+                fontFamily: 'Segoe UI',
+                fontSize: 18,
+                color: const Color(0xb8707070),
+              ),
+              textAlign: TextAlign.center,
+            ),
+          ),
+          Pinned.fromSize(
+            bounds: Rect.fromLTWH(59.0, 472.0, 283.0, 136.0),
+            size: Size(414.0, 896.0),
+            pinLeft: true,
+            fixedWidth: true,
+            fixedHeight: true,
+            child: Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(5.0),
+                color: const Color(0xff254da1),
+              ),
+            ),
+          ),
+          Pinned.fromSize(
+            bounds: Rect.fromLTWH(134.0, 459.0, 146.0, 44.0),
+            size: Size(414.0, 896.0),
+            fixedWidth: true,
+            fixedHeight: true,
+            child: Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(15.0),
+                color: const Color(0xffffffff),
+                border: Border.all(width: 1.0, color: const Color(0xff707070)),
+                boxShadow: [
+                  BoxShadow(
+                    color: const Color(0x29000000),
+                    offset: Offset(0, 3),
+                    blurRadius: 6,
+                  ),
+                ],
+              ),
+            ),
+          ),
+          Pinned.fromSize(
+            bounds: Rect.fromLTWH(171.0, 467.0, 72.0, 27.0),
+            size: Size(414.0, 896.0),
+            fixedWidth: true,
+            fixedHeight: true,
+            child: Text(
+              'PAKET 2',
+              style: TextStyle(
+                fontFamily: 'Segoe UI',
+                fontSize: 18,
+                color: const Color(0xb8707070),
+              ),
+              textAlign: TextAlign.center,
+            ),
+          ),
+          Pinned.fromSize(
+            bounds: Rect.fromLTWH(59.0, 640.0, 283.0, 136.0),
+            size: Size(414.0, 896.0),
+            pinLeft: true,
+            pinBottom: true,
+            fixedWidth: true,
+            fixedHeight: true,
+            child: Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(5.0),
+                color: const Color(0xff254da1),
+              ),
+            ),
+          ),
+          Pinned.fromSize(
+            bounds: Rect.fromLTWH(134.0, 627.0, 146.0, 44.0),
+            size: Size(414.0, 896.0),
+            fixedWidth: true,
+            fixedHeight: true,
+            child: Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(15.0),
+                color: const Color(0xffffffff),
+                border: Border.all(width: 1.0, color: const Color(0xff707070)),
+                boxShadow: [
+                  BoxShadow(
+                    color: const Color(0x29000000),
+                    offset: Offset(0, 3),
+                    blurRadius: 6,
+                  ),
+                ],
+              ),
+            ),
+          ),
+          Pinned.fromSize(
+            bounds: Rect.fromLTWH(165.0, 636.0, 72.0, 27.0),
+            size: Size(414.0, 896.0),
+            fixedWidth: true,
+            fixedHeight: true,
+            child: Text(
+              'PAKET 3',
+              style: TextStyle(
+                fontFamily: 'Segoe UI',
+                fontSize: 18,
+                color: const Color(0xb8707070),
+              ),
+              textAlign: TextAlign.center,
+            ),
+          ),
+          Pinned.fromSize(
+            bounds: Rect.fromLTWH(125.0, 345.0, 120.0, 27.0),
+            size: Size(414.0, 896.0),
+            fixedWidth: true,
+            fixedHeight: true,
+            child: Text(
+              'Rp 50.000',
+              style: TextStyle(
+                fontFamily: 'Segoe UI',
+                fontSize: 18,
+                color: const Color(0xffffffff),
+              ),
+              textAlign: TextAlign.left,
+            ),
+          ),
+          Pinned.fromSize(
+            bounds: Rect.fromLTWH(125.0, 379.0, 110.0, 27.0),
+            size: Size(414.0, 896.0),
+            fixedWidth: true,
+            fixedHeight: true,
+            child: Text(
+              '1 x 60 Menit',
+              style: TextStyle(
+                fontFamily: 'Segoe UI',
+                fontSize: 18,
+                color: const Color(0xffffffff),
+              ),
+              textAlign: TextAlign.left,
+            ),
+          ),
+          
+          Pinned.fromSize(
+            bounds: Rect.fromLTWH(125.0, 513.0, 180.0, 27.0),
+            size: Size(414.0, 896.0),
+            fixedWidth: true,
+            fixedHeight: true,
+            child: Text(
+              'Rp 150.000 ( 3x )',
+              style: TextStyle(
+                fontFamily: 'Segoe UI',
+                fontSize: 18,
+                color: const Color(0xffffffff),
+              ),
+              textAlign: TextAlign.left,
+            ),
+          ),
+          Pinned.fromSize(
+            bounds: Rect.fromLTWH(125.0, 547.0, 110.0, 27.0),
+            size: Size(414.0, 896.0),
+            fixedWidth: true,
+            fixedHeight: true,
+            child: Text(
+              '1 x 70 Menit',
+              style: TextStyle(
+                fontFamily: 'Segoe UI',
+                fontSize: 18,
+                color: const Color(0xffffffff),
+              ),
+              textAlign: TextAlign.left,
+            ),
+          ),
+          Pinned.fromSize(
+            bounds: Rect.fromLTWH(125.0, 681.0, 180.0, 27.0),
+            size: Size(414.0, 896.0),
+            fixedWidth: true,
+            fixedHeight: true,
+            child: Text(
+              'Rp 250.000 ( 5x )',
+              style: TextStyle(
+                fontFamily: 'Segoe UI',
+                fontSize: 18,
+                color: const Color(0xffffffff),
+              ),
+              textAlign: TextAlign.left,
+            ),
+          ),
+          Pinned.fromSize(
+            bounds: Rect.fromLTWH(125.0, 715.0, 110.0, 27.0),
+            size: Size(414.0, 896.0),
+            fixedWidth: true,
+            fixedHeight: true,
+            child: Text(
+              '1 x 80 Menit',
+              style: TextStyle(
+                fontFamily: 'Segoe UI',
+                fontSize: 18,
+                color: const Color(0xffffffff),
+              ),
+              textAlign: TextAlign.left,
+            ),
+          ),
+          Pinned.fromSize(
+            bounds: Rect.fromLTWH(85.0, 348.0, 10.0, 17.8),
             size: Size(414.0, 896.0),
             fixedWidth: true,
             fixedHeight: true,
@@ -477,7 +478,7 @@ class MaticCar extends StatelessWidget {
             ),
           ),
           Pinned.fromSize(
-            bounds: Rect.fromLTWH(85.0, 387.0, 15.0, 15.0),
+            bounds: Rect.fromLTWH(85.0, 384.0, 15.0, 15.0),
             size: Size(414.0, 896.0),
             fixedWidth: true,
             fixedHeight: true,
@@ -514,7 +515,7 @@ class MaticCar extends StatelessWidget {
             ),
           ),
           Pinned.fromSize(
-            bounds: Rect.fromLTWH(88.0, 520.0, 10.0, 17.8),
+            bounds: Rect.fromLTWH(85.0, 515.0, 10.0, 17.8),
             size: Size(414.0, 896.0),
             fixedWidth: true,
             fixedHeight: true,
@@ -527,7 +528,7 @@ class MaticCar extends StatelessWidget {
             ),
           ),
           Pinned.fromSize(
-            bounds: Rect.fromLTWH(85.0, 554.0, 15.0, 15.0),
+            bounds: Rect.fromLTWH(85.0, 550.0, 15.0, 15.0),
             size: Size(414.0, 896.0),
             fixedWidth: true,
             fixedHeight: true,
@@ -564,7 +565,7 @@ class MaticCar extends StatelessWidget {
             ),
           ),
           Pinned.fromSize(
-            bounds: Rect.fromLTWH(88.0, 688.0, 10.0, 17.8),
+            bounds: Rect.fromLTWH(85.0, 684.0, 10.0, 17.8),
             size: Size(414.0, 896.0),
             fixedWidth: true,
             fixedHeight: true,
@@ -577,7 +578,7 @@ class MaticCar extends StatelessWidget {
             ),
           ),
           Pinned.fromSize(
-            bounds: Rect.fromLTWH(85.0, 722.0, 15.0, 15.0),
+            bounds: Rect.fromLTWH(85.0, 732.0, 15.0, 15.0),
             size: Size(414.0, 896.0),
             pinBottom: true,
             fixedWidth: true,

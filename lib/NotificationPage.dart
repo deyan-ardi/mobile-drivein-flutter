@@ -87,7 +87,7 @@ class NotificationPage extends StatelessWidget {
               'YURADRIVE have a special promo for\nyou',
               style: TextStyle(
                 fontFamily: 'Segoe UI',
-                fontSize: 20,
+                fontSize: 18,
                 color: const Color(0xff655757),
                 fontWeight: FontWeight.w600,
               ),
@@ -104,7 +104,7 @@ class NotificationPage extends StatelessWidget {
               'CAHYA PRIVATE  MENGEMUDI have a\nspecial promo for you',
               style: TextStyle(
                 fontFamily: 'Segoe UI',
-                fontSize: 20,
+                fontSize: 18,
                 color: const Color(0xff655757),
                 fontWeight: FontWeight.w600,
               ),
@@ -129,8 +129,8 @@ class NotificationPage extends StatelessWidget {
                   child: Stack(
                     children: <Widget>[
                       Pinned.fromSize(
-                        bounds: Rect.fromLTWH(-3.1, -6.0, 53.4, 80.1),
-                        size: Size(51.0, 51.0),
+                        bounds: Rect.fromLTWH(-3.1, -1.0, 53.4, 80.1),
+                        size: Size(60.0, 80.0),
                         pinLeft: true,
                         pinRight: true,
                         pinTop: true,
@@ -138,14 +138,14 @@ class NotificationPage extends StatelessWidget {
                         child: Container(
                           decoration: BoxDecoration(
                             image: DecorationImage(
-                              image: const AssetImage(''),
+                              image: const AssetImage('assets/images/img25.png'),
                               fit: BoxFit.fill,
                             ),
                           ),
                         ),
                       ),
                       Pinned.fromSize(
-                        bounds: Rect.fromLTWH(0.0, 0.0, 51.0, 51.0),
+                        bounds: Rect.fromLTWH(0.0, 0.0, 51.0, 50.0),
                         size: Size(51.0, 51.0),
                         pinLeft: true,
                         pinRight: true,
@@ -173,14 +173,14 @@ class NotificationPage extends StatelessWidget {
               'Missel, Remember!\nYou have schedule on Monday ',
               style: TextStyle(
                 fontFamily: 'Segoe UI',
-                fontSize: 20,
+                fontSize: 18,
                 color: const Color(0xff655757),
                 fontWeight: FontWeight.w600,
               ),
               textAlign: TextAlign.left,
             ),
           ),
-          Pinned.fromSize(
+         Pinned.fromSize(
             bounds: Rect.fromLTWH(19.0, 29.0, 128.0, 33.0),
             size: Size(414.0, 896.0),
             pinLeft: true,
@@ -191,11 +191,11 @@ class NotificationPage extends StatelessWidget {
               'Hey Missel,',
               style: TextStyle(
                 fontFamily: 'Segoe UI',
-                fontSize: 25,
+                fontSize: 20,
                 color: const Color(0xffffffff),
                 fontWeight: FontWeight.w600,
               ),
-              textAlign: TextAlign.center,
+              textAlign: TextAlign.left,
             ),
           ),
           Pinned.fromSize(
@@ -212,7 +212,7 @@ class NotificationPage extends StatelessWidget {
                 fontSize: 17,
                 color: const Color(0xffffffff),
               ),
-              textAlign: TextAlign.center,
+              textAlign: TextAlign.left,
             ),
           ),
           Pinned.fromSize(
@@ -224,6 +224,14 @@ class NotificationPage extends StatelessWidget {
             fixedHeight: true,
             child: Stack(
               children: <Widget>[
+                Container(
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                      image: const AssetImage('assets/images/img25.png'),
+                      fit: BoxFit.fill,
+                    ),
+                  ),
+                ),
                 Pinned.fromSize(
                   bounds: Rect.fromLTWH(0.0, 0.0, 132.0, 132.0),
                   size: Size(132.0, 132.0),
@@ -231,46 +239,18 @@ class NotificationPage extends StatelessWidget {
                   pinRight: true,
                   pinTop: true,
                   pinBottom: true,
-                  child: Stack(
-                    children: <Widget>[
-                      Pinned.fromSize(
-                        bounds: Rect.fromLTWH(-7.8, -15.4, 138.4, 207.5),
-                        size: Size(132.0, 132.0),
-                        pinLeft: true,
-                        pinRight: true,
-                        pinTop: true,
-                        pinBottom: true,
-                        child: Container(
-                          decoration: BoxDecoration(
-                            image: DecorationImage(
-                              image: const AssetImage(''),
-                              fit: BoxFit.fill,
-                            ),
-                          ),
-                        ),
-                      ),
-                      Pinned.fromSize(
-                        bounds: Rect.fromLTWH(0.0, 0.0, 132.0, 132.0),
-                        size: Size(132.0, 132.0),
-                        pinLeft: true,
-                        pinRight: true,
-                        pinTop: true,
-                        pinBottom: true,
-                        child: Container(
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.all(
-                                Radius.elliptical(9999.0, 9999.0)),
-                          ),
-                        ),
-                      ),
-                    ],
+                  child: Container(
+                    decoration: BoxDecoration(
+                      borderRadius:
+                          BorderRadius.all(Radius.elliptical(9999.0, 9999.0)),
+                    ),
                   ),
                 ),
               ],
             ),
           ),
-          Pinned.fromSize(
-            bounds: Rect.fromLTWH(38.0, 178.0, 335.0, 57.0),
+            Pinned.fromSize(
+            bounds: Rect.fromLTWH(38.0, 200.0, 335.0, 57.0),
             size: Size(414.0, 896.0),
             pinLeft: true,
             pinRight: true,
@@ -284,22 +264,7 @@ class NotificationPage extends StatelessWidget {
             ),
           ),
           Pinned.fromSize(
-            bounds: Rect.fromLTWH(97.0, 190.0, 64.0, 30.0),
-            size: Size(414.0, 896.0),
-            fixedWidth: true,
-            fixedHeight: true,
-            child: Text(
-              'Search',
-              style: TextStyle(
-                fontFamily: 'Nirmala UI',
-                fontSize: 22,
-                color: const Color(0x4f707070),
-              ),
-              textAlign: TextAlign.center,
-            ),
-          ),
-          Pinned.fromSize(
-            bounds: Rect.fromLTWH(58.0, 190.0, 33.0, 33.0),
+            bounds: Rect.fromLTWH(58.0, 210.0, 33.0, 33.0),
             size: Size(414.0, 896.0),
             pinLeft: true,
             fixedWidth: true,
@@ -307,13 +272,28 @@ class NotificationPage extends StatelessWidget {
             child: Container(
               decoration: BoxDecoration(
                 image: DecorationImage(
-                  image: const AssetImage(''),
+                  image: const AssetImage('assets/images/img24.png'),
                   fit: BoxFit.cover,
                   colorFilter: new ColorFilter.mode(
                       Colors.black.withOpacity(0.52), BlendMode.dstIn),
                 ),
                 border: Border.all(width: 1.0, color: const Color(0x00000000)),
               ),
+            ),
+          ),
+          Pinned.fromSize(
+            bounds: Rect.fromLTWH(97.0, 215.0, 64.0, 30.0),
+            size: Size(414.0, 896.0),
+            fixedWidth: true,
+            fixedHeight: true,
+            child: Text(
+              'Search',
+              style: TextStyle(
+                fontFamily: 'Nirmala UI',
+                fontSize: 20,
+                color: const Color(0x4f707070),
+              ),
+              textAlign: TextAlign.center,
             ),
           ),
           Pinned.fromSize(

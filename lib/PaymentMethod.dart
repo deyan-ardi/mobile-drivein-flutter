@@ -57,10 +57,10 @@ class PaymentMethod extends StatelessWidget {
               'PAYMENT',
               style: TextStyle(
                 fontFamily: 'Segoe UI',
-                fontSize: 30,
+                fontSize: 28,
                 color: const Color(0xb8707070),
               ),
-              textAlign: TextAlign.center,
+              textAlign: TextAlign.left,
             ),
           ),
           Pinned.fromSize(
@@ -72,11 +72,11 @@ class PaymentMethod extends StatelessWidget {
               'DrivPay',
               style: TextStyle(
                 fontFamily: 'Segoe UI',
-                fontSize: 25,
+                fontSize: 22,
                 color: const Color(0xff707070),
                 fontWeight: FontWeight.w600,
               ),
-              textAlign: TextAlign.center,
+              textAlign: TextAlign.left,
             ),
           ),
           Pinned.fromSize(
@@ -116,11 +116,11 @@ class PaymentMethod extends StatelessWidget {
               'Cash',
               style: TextStyle(
                 fontFamily: 'Segoe UI',
-                fontSize: 25,
+                fontSize: 22,
                 color: const Color(0xff707070),
                 fontWeight: FontWeight.w600,
               ),
-              textAlign: TextAlign.center,
+              textAlign: TextAlign.left,
             ),
           ),
           Pinned.fromSize(
@@ -177,11 +177,11 @@ class PaymentMethod extends StatelessWidget {
               'Transfer Bank',
               style: TextStyle(
                 fontFamily: 'Segoe UI',
-                fontSize: 25,
+                fontSize: 22,
                 color: const Color(0xff707070),
                 fontWeight: FontWeight.w600,
               ),
-              textAlign: TextAlign.center,
+              textAlign: TextAlign.left,
             ),
           ),
           Pinned.fromSize(
@@ -205,11 +205,11 @@ class PaymentMethod extends StatelessWidget {
               'Kartu Kredit / Debit',
               style: TextStyle(
                 fontFamily: 'Segoe UI',
-                fontSize: 25,
+                fontSize: 22,
                 color: const Color(0xff707070),
                 fontWeight: FontWeight.w600,
               ),
-              textAlign: TextAlign.center,
+              textAlign: TextAlign.left,
             ),
           ),
           Pinned.fromSize(
@@ -274,11 +274,11 @@ class PaymentMethod extends StatelessWidget {
                 'QR Code',
                 style: TextStyle(
                   fontFamily: 'Segoe UI',
-                  fontSize: 25,
+                  fontSize: 22,
                   color: const Color(0xff707070),
                   fontWeight: FontWeight.w600,
                 ),
-                textAlign: TextAlign.center,
+                textAlign: TextAlign.left,
               ),
             ),
           ),

@@ -141,7 +141,7 @@ class Mentor extends StatelessWidget {
             ),
           ),
           Pinned.fromSize(
-            bounds: Rect.fromLTWH(134.0, 310.0, 146.0, 35.0),
+            bounds: Rect.fromLTWH(100.0, 320.0, 211.0, 35.0),
             size: Size(414.0, 896.0),
             fixedWidth: true,
             fixedHeight: true,
@@ -149,7 +149,7 @@ class Mentor extends StatelessWidget {
               'REVIEW EXPERIENCE',
               style: TextStyle(
                 fontFamily: 'Segoe UI',
-                fontSize: 16,
+                fontSize: 22,
                 color: const Color(0xff797272),
               ),
               textAlign: TextAlign.center,

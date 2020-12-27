@@ -17,42 +17,6 @@ class Promo extends StatelessWidget {
       body: Stack(
         children: <Widget>[
           Pinned.fromSize(
-            bounds: Rect.fromLTWH(15.0, 13.0, 62.0, 40.0),
-            size: Size(414.0, 896.0),
-            pinLeft: true,
-            pinTop: true,
-            fixedWidth: true,
-            fixedHeight: true,
-            child: Text(
-              'Back',
-              style: TextStyle(
-                fontFamily: 'Segoe UI',
-                fontSize: 30,
-                color: const Color(0xff655757),
-              ),
-              textAlign: TextAlign.center,
-            ),
-          ),
-          Pinned.fromSize(
-            bounds: Rect.fromLTWH(361.0, 13.0, 48.0, 48.0),
-            size: Size(414.0, 896.0),
-            pinRight: true,
-            pinTop: true,
-            fixedWidth: true,
-            fixedHeight: true,
-            child: Container(
-              decoration: BoxDecoration(
-                image: DecorationImage(
-                  image: const AssetImage(''),
-                  fit: BoxFit.cover,
-                  colorFilter: new ColorFilter.mode(
-                      Colors.black.withOpacity(0.51), BlendMode.dstIn),
-                ),
-                border: Border.all(width: 1.0, color: const Color(0x00000000)),
-              ),
-            ),
-          ),
-          Pinned.fromSize(
             bounds: Rect.fromLTWH(0.0, 0.0, 414.0, 216.0),
             size: Size(414.0, 896.0),
             pinLeft: true,
@@ -71,20 +35,6 @@ class Promo extends StatelessWidget {
             ),
           ),
           Pinned.fromSize(
-            bounds: Rect.fromLTWH(38.0, 178.0, 335.0, 57.0),
-            size: Size(414.0, 896.0),
-            pinLeft: true,
-            pinRight: true,
-            fixedHeight: true,
-            child: Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(35.0),
-                color: const Color(0xffffffff),
-                border: Border.all(width: 1.0, color: const Color(0xff707070)),
-              ),
-            ),
-          ),
-          Pinned.fromSize(
             bounds: Rect.fromLTWH(19.0, 29.0, 128.0, 33.0),
             size: Size(414.0, 896.0),
             pinLeft: true,
@@ -95,11 +45,11 @@ class Promo extends StatelessWidget {
               'Hey Missel,',
               style: TextStyle(
                 fontFamily: 'Segoe UI',
-                fontSize: 25,
+                fontSize: 20,
                 color: const Color(0xffffffff),
                 fontWeight: FontWeight.w600,
               ),
-              textAlign: TextAlign.center,
+              textAlign: TextAlign.left,
             ),
           ),
           Pinned.fromSize(
@@ -116,7 +66,7 @@ class Promo extends StatelessWidget {
                 fontSize: 17,
                 color: const Color(0xffffffff),
               ),
-              textAlign: TextAlign.center,
+              textAlign: TextAlign.left,
             ),
           ),
           Pinned.fromSize(
@@ -137,22 +87,15 @@ class Promo extends StatelessWidget {
                   pinBottom: true,
                   child: Stack(
                     children: <Widget>[
-                      Pinned.fromSize(
-                        bounds: Rect.fromLTWH(-7.8, -15.4, 138.4, 207.5),
-                        size: Size(132.0, 132.0),
-                        pinLeft: true,
-                        pinRight: true,
-                        pinTop: true,
-                        pinBottom: true,
-                        child: Container(
+                      Container(
                           decoration: BoxDecoration(
                             image: DecorationImage(
-                              image: const AssetImage(''),
+                              image: const AssetImage('assets/images/img25.png'),
                               fit: BoxFit.fill,
                             ),
                           ),
                         ),
-                      ),
+                      
                       Pinned.fromSize(
                         bounds: Rect.fromLTWH(0.0, 0.0, 132.0, 132.0),
                         size: Size(132.0, 132.0),
@@ -174,20 +117,21 @@ class Promo extends StatelessWidget {
             ),
           ),
           Pinned.fromSize(
-            bounds: Rect.fromLTWH(0.5, 828.5, 432.0, 1.0),
+            bounds: Rect.fromLTWH(38.0, 200.0, 335.0, 57.0),
             size: Size(414.0, 896.0),
             pinLeft: true,
             pinRight: true,
-            pinBottom: true,
             fixedHeight: true,
-            child: SvgPicture.string(
-              _svg_izsjcu,
-              allowDrawingOutsideViewBox: true,
-              fit: BoxFit.fill,
+            child: Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(35.0),
+                color: const Color(0xffffffff),
+                border: Border.all(width: 1.0, color: const Color(0xff707070)),
+              ),
             ),
           ),
-          Pinned.fromSize(
-            bounds: Rect.fromLTWH(97.0, 190.0, 64.0, 30.0),
+           Pinned.fromSize(
+            bounds: Rect.fromLTWH(97.0, 215.0, 64.0, 30.0),
             size: Size(414.0, 896.0),
             fixedWidth: true,
             fixedHeight: true,
@@ -195,14 +139,14 @@ class Promo extends StatelessWidget {
               'Search',
               style: TextStyle(
                 fontFamily: 'Nirmala UI',
-                fontSize: 22,
+                fontSize: 20,
                 color: const Color(0x4f707070),
               ),
               textAlign: TextAlign.center,
             ),
           ),
-          Pinned.fromSize(
-            bounds: Rect.fromLTWH(58.0, 190.0, 33.0, 33.0),
+         Pinned.fromSize(
+            bounds: Rect.fromLTWH(58.0, 210.0, 33.0, 33.0),
             size: Size(414.0, 896.0),
             pinLeft: true,
             fixedWidth: true,
@@ -210,7 +154,7 @@ class Promo extends StatelessWidget {
             child: Container(
               decoration: BoxDecoration(
                 image: DecorationImage(
-                  image: const AssetImage(''),
+                  image: const AssetImage('assets/images/img24.png'),
                   fit: BoxFit.cover,
                   colorFilter: new ColorFilter.mode(
                       Colors.black.withOpacity(0.52), BlendMode.dstIn),
@@ -517,8 +461,6 @@ class Promo extends StatelessWidget {
   }
 }
 
-const String _svg_izsjcu =
-    '<svg viewBox="0.5 828.5 432.0 1.0" ><defs><filter id="shadow"><feDropShadow dx="0" dy="3" stdDeviation="6"/></filter></defs><path transform="translate(0.5, 828.5)" d="M 0 0 L 432 0" fill="none" stroke="#e4e4e4" stroke-width="1" stroke-miterlimit="4" stroke-linecap="butt" filter="url(#shadow)"/></svg>';
 const String _svg_culyom =
     '<svg viewBox="28.0 852.0 30.0 23.3" ><path transform="translate(28.0, 849.75)" d="M 14.6011905670166 8.305649757385254 L 4.999332427978516 16.21388816833496 L 4.999332427978516 24.7491626739502 C 4.999332427978516 25.20936393737793 5.37239933013916 25.58243179321289 5.832600593566895 25.58243179321289 L 11.66860485076904 25.56732940673828 C 12.12717914581299 25.56503868103027 12.49771404266357 25.19264030456543 12.49770832061768 24.73406028747559 L 12.49770832061768 19.74955177307129 C 12.49770832061768 19.28935050964355 12.870774269104 18.91628265380859 13.33097648620605 18.91628265380859 L 16.6640510559082 18.91628265380859 C 17.12425231933594 18.91628265380859 17.49731826782227 19.28935050964355 17.49731826782227 19.74955177307129 L 17.49731826782227 24.73041343688965 C 17.49662780761719 24.95186042785645 17.58411026000977 25.16447448730469 17.74045372009277 25.32131004333496 C 17.89679908752441 25.47813987731934 18.10913848876953 25.56628608703613 18.33058738708496 25.56628608703613 L 24.16450881958008 25.58243179321289 C 24.62471008300781 25.58243179321289 24.99777793884277 25.20936393737793 24.99777793884277 24.7491626739502 L 24.99777793884277 16.20816040039063 L 15.39800357818604 8.305649757385254 C 15.16546726226807 8.118213653564453 14.83372688293457 8.118213653564453 14.6011905670166 8.305649757385254 Z M 29.76823997497559 13.68075275421143 L 25.4144115447998 10.09196949005127 L 25.4144115447998 2.878467082977295 C 25.4144115447998 2.533315658569336 25.13461303710938 2.253515720367432 24.78946113586426 2.253515720367432 L 21.87302017211914 2.253515720367432 C 21.52786827087402 2.253515720367432 21.24806785583496 2.533316135406494 21.24806785583496 2.878467559814453 L 21.24806785583496 6.6599440574646 L 16.58541107177734 2.823783874511719 C 15.66260528564453 2.064407348632813 14.33138179779053 2.064407348632813 13.4085750579834 2.823783874511719 L 0.2257447987794876 13.68075275421143 C -0.04040739312767982 13.90073490142822 -0.07772185653448105 14.29487133026123 0.1424181163311005 14.56089401245117 L 1.470439672470093 16.17535018920898 C 1.575864791870117 16.30354309082031 1.727953553199768 16.3845329284668 1.893162965774536 16.40045738220215 C 2.058372259140015 16.41637992858887 2.223130464553833 16.36593437194824 2.35110068321228 16.26024055480957 L 14.6011905670166 6.170399188995361 C 14.83372688293457 5.982963562011719 15.16546726226807 5.982963562011719 15.39800453186035 6.17039966583252 L 27.64861488342285 16.26024055480957 C 27.91463661193848 16.48037910461426 28.30877494812012 16.44306373596191 28.52875518798828 16.17691230773926 L 29.85677909851074 14.56245517730713 C 29.96238136291504 14.43396663665771 30.01241111755371 14.26868343353271 29.99579620361328 14.10319995880127 C 29.97917938232422 13.93771362304688 29.89728736877441 13.78567886352539 29.76824569702148 13.68075275421143 Z" fill="#254da1" stroke="none" stroke-width="1" stroke-miterlimit="4" stroke-linecap="butt" /></svg>';
 const String _svg_bpi3jr =

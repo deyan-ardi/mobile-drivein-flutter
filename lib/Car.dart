@@ -101,10 +101,10 @@ class Car extends StatelessWidget {
               'MANUAL',
               style: TextStyle(
                 fontFamily: 'Segoe UI',
-                fontSize: 30,
+                fontSize: 28,
                 color: const Color(0xb8ffffff),
               ),
-              textAlign: TextAlign.center,
+              textAlign: TextAlign.left,
             ),
           ),
           Pinned.fromSize(
@@ -139,10 +139,10 @@ class Car extends StatelessWidget {
               'MATIC',
               style: TextStyle(
                 fontFamily: 'Segoe UI',
-                fontSize: 30,
+                fontSize: 28,
                 color: const Color(0xb8ffffff),
               ),
-              textAlign: TextAlign.center,
+              textAlign: TextAlign.left,
             ),
           ),
           Pinned.fromSize(

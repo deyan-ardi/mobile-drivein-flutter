@@ -65,10 +65,10 @@ class Profile extends StatelessWidget {
                     'Your Name',
                     style: TextStyle(
                       fontFamily: 'Segoe UI',
-                      fontSize: 18,
+                      fontSize: 17,
                       color: const Color(0xffafadad),
                     ),
-                    textAlign: TextAlign.center,
+                    textAlign: TextAlign.left,
                   ),
                 ),
                 Pinned.fromSize(
@@ -81,10 +81,10 @@ class Profile extends StatelessWidget {
                     'Your Age',
                     style: TextStyle(
                       fontFamily: 'Segoe UI',
-                      fontSize: 18,
+                      fontSize: 17,
                       color: const Color(0xffafadad),
                     ),
-                    textAlign: TextAlign.center,
+                    textAlign: TextAlign.left,
                   ),
                 ),
                 Pinned.fromSize(
@@ -134,10 +134,10 @@ class Profile extends StatelessWidget {
                     'Address',
                     style: TextStyle(
                       fontFamily: 'Segoe UI',
-                      fontSize: 18,
+                      fontSize: 17,
                       color: const Color(0xffaaa7a7),
                     ),
-                    textAlign: TextAlign.center,
+                    textAlign: TextAlign.left,
                   ),
                 ),
                 Pinned.fromSize(
@@ -164,10 +164,10 @@ class Profile extends StatelessWidget {
                     'Phone Number',
                     style: TextStyle(
                       fontFamily: 'Segoe UI',
-                      fontSize: 18,
+                      fontSize: 17,
                       color: const Color(0xffaaa7a7),
                     ),
-                    textAlign: TextAlign.center,
+                    textAlign: TextAlign.left,
                   ),
                 ),
               ],
@@ -190,22 +190,14 @@ class Profile extends StatelessWidget {
                   pinBottom: true,
                   child: Stack(
                     children: <Widget>[
-                      Pinned.fromSize(
-                        bounds: Rect.fromLTWH(-9.8, -19.5, 174.7, 262.0),
-                        size: Size(167.0, 167.0),
-                        pinLeft: true,
-                        pinRight: true,
-                        pinTop: true,
-                        pinBottom: true,
-                        child: Container(
+                       Container(
                           decoration: BoxDecoration(
                             image: DecorationImage(
-                              image: const AssetImage(''),
+                              image: const AssetImage('assets/images/img25.png'),
                               fit: BoxFit.fill,
                             ),
                           ),
                         ),
-                      ),
                       Pinned.fromSize(
                         bounds: Rect.fromLTWH(0.0, 0.0, 167.0, 167.0),
                         size: Size(167.0, 167.0),
@@ -236,7 +228,7 @@ class Profile extends StatelessWidget {
               'Profil',
               style: TextStyle(
                 fontFamily: 'Segoe UI',
-                fontSize: 30,
+                fontSize: 28,
                 color: const Color(0xffffffff),
               ),
               textAlign: TextAlign.center,
@@ -363,25 +355,36 @@ class Profile extends StatelessWidget {
             fixedHeight: true,
             child:
                 // Adobe XD layer: 'Icon ionic-ios-sett…' (shape)
-                SvgPicture.string(
+              SvgPicture.string(
               _svg_es5xpn,
               allowDrawingOutsideViewBox: true,
               fit: BoxFit.fill,
             ),
           ),
           Pinned.fromSize(
-            bounds: Rect.fromLTWH(190.0, 671.0, 36.0, 24.0),
+            bounds: Rect.fromLTWH(190.0, 671.0, 38.0, 24.0),
             size: Size(414.0, 896.0),
             fixedWidth: true,
             fixedHeight: true,
+            child: 
+            PageLink(
+              links: [
+                PageLinkInfo(
+                  transition: LinkTransition.Fade,
+                  ease: Curves.easeOut,
+                  duration: 0.3,
+                  pageBuilder: () => Home(),
+                ),
+              ],
             child: Text(
               'Save',
               style: TextStyle(
                 fontFamily: 'Segoe UI',
-                fontSize: 18,
+                fontSize: 17,
                 color: const Color(0xffafadad),
               ),
               textAlign: TextAlign.center,
+            ),
             ),
           ),
         ],

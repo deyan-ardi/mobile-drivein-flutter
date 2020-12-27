@@ -112,7 +112,7 @@ class MentorAgenda extends StatelessWidget {
             ),
           ),
           Pinned.fromSize(
-            bounds: Rect.fromLTWH(113.0, 316.0, 188.0, 37.0),
+            bounds: Rect.fromLTWH(113.0, 325.0, 188.0, 37.0),
             size: Size(414.0, 896.0),
             fixedWidth: true,
             fixedHeight: true,
@@ -147,7 +147,7 @@ class MentorAgenda extends StatelessWidget {
               'MONDAY',
               style: TextStyle(
                 fontFamily: 'Segoe UI',
-                fontSize: 20,
+                fontSize: 18,
                 color: const Color(0xa1655757),
               ),
               textAlign: TextAlign.center,
@@ -182,7 +182,7 @@ class MentorAgenda extends StatelessWidget {
                     'TUESDAY',
                     style: TextStyle(
                       fontFamily: 'Segoe UI',
-                      fontSize: 20,
+                      fontSize: 18,
                       color: const Color(0xa1655757),
                     ),
                     textAlign: TextAlign.center,
@@ -220,7 +220,7 @@ class MentorAgenda extends StatelessWidget {
                     'WEDNESDAY',
                     style: TextStyle(
                       fontFamily: 'Segoe UI',
-                      fontSize: 20,
+                      fontSize: 18,
                       color: const Color(0xa1655757),
                     ),
                     textAlign: TextAlign.center,
@@ -258,7 +258,7 @@ class MentorAgenda extends StatelessWidget {
                     'THURSDAY',
                     style: TextStyle(
                       fontFamily: 'Segoe UI',
-                      fontSize: 20,
+                      fontSize: 18,
                       color: const Color(0xa1655757),
                     ),
                     textAlign: TextAlign.center,
@@ -296,7 +296,7 @@ class MentorAgenda extends StatelessWidget {
                     'FRIDAY',
                     style: TextStyle(
                       fontFamily: 'Segoe UI',
-                      fontSize: 20,
+                      fontSize: 18,
                       color: const Color(0xa1655757),
                     ),
                     textAlign: TextAlign.center,

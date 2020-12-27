@@ -6,6 +6,8 @@ import './Nearby.dart';
 import './Events.dart';
 import './Promo.dart';
 import './Profile.dart';
+import './PaymentMethod.dart';
+import './NotificationPage.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class Home extends StatelessWidget {
@@ -142,18 +144,29 @@ class Home extends StatelessWidget {
             pinLeft: true,
             pinRight: true,
             fixedHeight: true,
-            child: Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(15.0),
-                color: const Color(0xffffffff),
-                border: Border.all(width: 1.0, color: const Color(0xff707070)),
-                boxShadow: [
-                  BoxShadow(
-                    color: const Color(0x29000000),
-                    offset: Offset(0, 3),
-                    blurRadius: 6,
-                  ),
-                ],
+            child: PageLink(
+              links: [
+                PageLinkInfo(
+                  transition: LinkTransition.Fade,
+                  ease: Curves.easeOut,
+                  duration: 0.3,
+                  pageBuilder: () => PaymentMethod(),
+                ),
+              ],
+              child: Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(15.0),
+                  color: const Color(0xffffffff),
+                  border:
+                      Border.all(width: 1.0, color: const Color(0xff707070)),
+                  boxShadow: [
+                    BoxShadow(
+                      color: const Color(0x29000000),
+                      offset: Offset(0, 3),
+                      blurRadius: 6,
+                    ),
+                  ],
+                ),
               ),
             ),
           ),
@@ -482,14 +495,14 @@ class Home extends StatelessWidget {
             fixedHeight: true,
             child: Stack(
               children: <Widget>[
-               Container(
-                    decoration: BoxDecoration(
-                      image: DecorationImage(
-                        image: const AssetImage('assets/images/img25.png'),
-                        fit: BoxFit.fill,
-                      ),
+                Container(
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                      image: const AssetImage('assets/images/img25.png'),
+                      fit: BoxFit.fill,
                     ),
                   ),
+                ),
                 Pinned.fromSize(
                   bounds: Rect.fromLTWH(0.0, 0.0, 132.0, 132.0),
                   size: Size(132.0, 132.0),
@@ -548,27 +561,51 @@ class Home extends StatelessWidget {
             ),
           ),
           Pinned.fromSize(
-            bounds: Rect.fromLTWH(204.1, 877.5, 6.8, 3.7),
+            bounds: Rect.fromLTWH(195.0, 850.0, 25.0, 31.3),
             size: Size(414.0, 896.0),
             pinBottom: true,
             fixedWidth: true,
             fixedHeight: true,
-            child: SvgPicture.string(
-              _svg_ke49tq,
-              allowDrawingOutsideViewBox: true,
-              fit: BoxFit.fill,
-            ),
-          ),
-          Pinned.fromSize(
-            bounds: Rect.fromLTWH(195.0, 850.0, 25.0, 26.2),
-            size: Size(414.0, 896.0),
-            pinBottom: true,
-            fixedWidth: true,
-            fixedHeight: true,
-            child: SvgPicture.string(
-              _svg_d3t5wk,
-              allowDrawingOutsideViewBox: true,
-              fit: BoxFit.fill,
+            child:
+                // Adobe XD layer: 'Icon ionic-ios-noti…' (group)
+                PageLink(
+              links: [
+                PageLinkInfo(
+                  transition: LinkTransition.Fade,
+                  ease: Curves.easeOut,
+                  duration: 0.3,
+                  pageBuilder: () => NotificationPage(),
+                ),
+              ],
+              child: Stack(
+                children: <Widget>[
+                  Pinned.fromSize(
+                    bounds: Rect.fromLTWH(9.1, 27.5, 6.8, 3.7),
+                    size: Size(25.0, 31.3),
+                    pinBottom: true,
+                    fixedWidth: true,
+                    fixedHeight: true,
+                    child: SvgPicture.string(
+                      _svg_ke49tq,
+                      allowDrawingOutsideViewBox: true,
+                      fit: BoxFit.fill,
+                    ),
+                  ),
+                  Pinned.fromSize(
+                    bounds: Rect.fromLTWH(0.0, 0.0, 25.0, 26.2),
+                    size: Size(25.0, 31.3),
+                    pinLeft: true,
+                    pinRight: true,
+                    pinTop: true,
+                    pinBottom: true,
+                    child: SvgPicture.string(
+                      _svg_d3t5wk,
+                      allowDrawingOutsideViewBox: true,
+                      fit: BoxFit.fill,
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
         ],

@@ -172,8 +172,12 @@ class Booking extends StatelessWidget {
               allowDrawingOutsideViewBox: true,
             ),
           ),
-          Transform.translate(
-            offset: Offset(76.0, 744.0),
+          Pinned.fromSize(
+            bounds: Rect.fromLTWH(59.0, 820.0, 283.0, 60.0),
+            size: Size(414.0, 896.0),
+            pinLeft: true,
+            fixedWidth: true,
+            fixedHeight: true,
             child: PageLink(
               links: [
                 PageLinkInfo(
@@ -211,7 +215,7 @@ class Booking extends StatelessWidget {
                         'CONFIRMATION',
                         style: TextStyle(
                           fontFamily: 'Segoe UI',
-                          fontSize: 24,
+                          fontSize: 22,
                           color: const Color(0xffffffff),
                         ),
                         textAlign: TextAlign.center,

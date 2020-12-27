@@ -97,7 +97,7 @@ class AboutMentor extends StatelessWidget {
             ),
           ),
           Pinned.fromSize(
-            bounds: Rect.fromLTWH(113.0, 316.0, 188.0, 37.0),
+            bounds: Rect.fromLTWH(113.0, 325.0, 188.0, 37.0),
             size: Size(414.0, 896.0),
             fixedWidth: true,
             fixedHeight: true,
@@ -146,7 +146,7 @@ class AboutMentor extends StatelessWidget {
               'Agus is a driver from Denpasar \nwho already has a lot of experience\nand driving certificates.',
               style: TextStyle(
                 fontFamily: 'Segoe UI',
-                fontSize: 16,
+                fontSize: 14,
                 color: const Color(0xffffffff),
               ),
               textAlign: TextAlign.left,
@@ -174,10 +174,10 @@ class AboutMentor extends StatelessWidget {
               'Driving experience',
               style: TextStyle(
                 fontFamily: 'Segoe UI',
-                fontSize: 16,
+                fontSize: 14,
                 color: const Color(0xffffffff),
               ),
-              textAlign: TextAlign.center,
+              textAlign: TextAlign.left,
             ),
           ),
           Pinned.fromSize(
@@ -189,10 +189,10 @@ class AboutMentor extends StatelessWidget {
               '- PT. Adi Jaya (3 Years)',
               style: TextStyle(
                 fontFamily: 'Segoe UI',
-                fontSize: 16,
+                fontSize: 14,
                 color: const Color(0xffffffff),
               ),
-              textAlign: TextAlign.center,
+              textAlign: TextAlign.left,
             ),
           ),
           Pinned.fromSize(
@@ -205,10 +205,10 @@ class AboutMentor extends StatelessWidget {
               '- Jaya Abadi Departemen Store ( 1 Year)',
               style: TextStyle(
                 fontFamily: 'Segoe UI',
-                fontSize: 16,
+                fontSize: 14,
                 color: const Color(0xffffffff),
               ),
-              textAlign: TextAlign.center,
+              textAlign: TextAlign.left,
             ),
           ),
           Pinned.fromSize(
@@ -220,10 +220,10 @@ class AboutMentor extends StatelessWidget {
               '- Open a driving course (2 Years)',
               style: TextStyle(
                 fontFamily: 'Segoe UI',
-                fontSize: 16,
+                fontSize: 14,
                 color: const Color(0xffffffff),
               ),
-              textAlign: TextAlign.center,
+              textAlign: TextAlign.left,
             ),
           ),
           Pinned.fromSize(

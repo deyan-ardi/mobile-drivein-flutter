@@ -1325,7 +1325,7 @@ class Nearby extends StatelessWidget {
                       child: Container(
                         decoration: BoxDecoration(
                           image: DecorationImage(
-                            image: const AssetImage(''),
+                            image: const AssetImage('assets/images/nearby1.png'),
                             fit: BoxFit.cover,
                           ),
                           border: Border.all(
@@ -1374,7 +1374,7 @@ class Nearby extends StatelessWidget {
               height: 23.0,
               decoration: BoxDecoration(
                 image: DecorationImage(
-                  image: const AssetImage(''),
+                  image: const AssetImage('assets/images/nearby2.png'),
                   fit: BoxFit.cover,
                   colorFilter: new ColorFilter.mode(
                       Colors.black.withOpacity(0.72), BlendMode.dstIn),
@@ -1409,7 +1409,7 @@ class Nearby extends StatelessWidget {
               height: 18.0,
               decoration: BoxDecoration(
                 image: DecorationImage(
-                  image: const AssetImage(''),
+                  image: const AssetImage('assets/images/nearby3.png'),
                   fit: BoxFit.cover,
                   colorFilter: new ColorFilter.mode(
                       Colors.black.withOpacity(0.48), BlendMode.dstIn),
@@ -1454,8 +1454,13 @@ class Nearby extends StatelessWidget {
               textAlign: TextAlign.left,
             ),
           ),
-          Transform.translate(
-            offset: Offset(28.0, 852.0),
+           Pinned.fromSize(
+            bounds: Rect.fromLTWH(28.0, 852.0, 30.0, 23.3),
+            size: Size(414.0, 896.0),
+            pinLeft: true,
+            pinBottom: true,
+            fixedWidth: true,
+            fixedHeight: true,
             child:
                 // Adobe XD layer: 'Icon awesome-home' (shape)
                 PageLink(
@@ -1470,11 +1475,17 @@ class Nearby extends StatelessWidget {
               child: SvgPicture.string(
                 _svg_culyom,
                 allowDrawingOutsideViewBox: true,
+                fit: BoxFit.fill,
               ),
             ),
           ),
-          Transform.translate(
-            offset: Offset(356.0, 852.0),
+          Pinned.fromSize(
+            bounds: Rect.fromLTWH(356.0, 852.0, 25.0, 25.0),
+            size: Size(414.0, 896.0),
+            pinRight: true,
+            pinBottom: true,
+            fixedWidth: true,
+            fixedHeight: true,
             child:
                 // Adobe XD layer: 'Icon ionic-ios-sett…' (shape)
                 PageLink(
@@ -1489,11 +1500,16 @@ class Nearby extends StatelessWidget {
               child: SvgPicture.string(
                 _svg_es5xpn,
                 allowDrawingOutsideViewBox: true,
+                fit: BoxFit.fill,
               ),
             ),
           ),
-          Transform.translate(
-            offset: Offset(195.0, 850.0),
+          Pinned.fromSize(
+            bounds: Rect.fromLTWH(195.0, 850.0, 25.0, 31.3),
+            size: Size(414.0, 896.0),
+            pinBottom: true,
+            fixedWidth: true,
+            fixedHeight: true,
             child:
                 // Adobe XD layer: 'Icon ionic-ios-noti…' (group)
                 PageLink(
@@ -1505,38 +1521,34 @@ class Nearby extends StatelessWidget {
                   pageBuilder: () => NotificationPage(),
                 ),
               ],
-              child: SizedBox(
-                width: 25.0,
-                height: 31.0,
-                child: Stack(
-                  children: <Widget>[
-                    Pinned.fromSize(
-                      bounds: Rect.fromLTWH(9.1, 27.5, 6.8, 3.7),
-                      size: Size(25.0, 31.3),
-                      pinBottom: true,
-                      fixedWidth: true,
-                      fixedHeight: true,
-                      child: SvgPicture.string(
-                        _svg_bpi3jr,
-                        allowDrawingOutsideViewBox: true,
-                        fit: BoxFit.fill,
-                      ),
+              child: Stack(
+                children: <Widget>[
+                  Pinned.fromSize(
+                    bounds: Rect.fromLTWH(9.1, 27.5, 6.8, 3.7),
+                    size: Size(25.0, 31.3),
+                    pinBottom: true,
+                    fixedWidth: true,
+                    fixedHeight: true,
+                    child: SvgPicture.string(
+                      _svg_bpi3jr,
+                      allowDrawingOutsideViewBox: true,
+                      fit: BoxFit.fill,
                     ),
-                    Pinned.fromSize(
-                      bounds: Rect.fromLTWH(0.0, 0.0, 25.0, 26.2),
-                      size: Size(25.0, 31.3),
-                      pinLeft: true,
-                      pinRight: true,
-                      pinTop: true,
-                      pinBottom: true,
-                      child: SvgPicture.string(
-                        _svg_x6p204,
-                        allowDrawingOutsideViewBox: true,
-                        fit: BoxFit.fill,
-                      ),
+                  ),
+                  Pinned.fromSize(
+                    bounds: Rect.fromLTWH(0.0, 0.0, 25.0, 26.2),
+                    size: Size(25.0, 31.3),
+                    pinLeft: true,
+                    pinRight: true,
+                    pinTop: true,
+                    pinBottom: true,
+                    child: SvgPicture.string(
+                      _svg_x6p204,
+                      allowDrawingOutsideViewBox: true,
+                      fit: BoxFit.fill,
                     ),
-                  ],
-                ),
+                  ),
+                ],
               ),
             ),
           ),

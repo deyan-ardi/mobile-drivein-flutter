@@ -5,6 +5,7 @@ import 'package:adobe_xd/page_link.dart';
 import './Profile.dart';
 import './NotificationPage.dart';
 import './PaymentMethod.dart';
+import './PaymentInformation.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class QRPayment extends StatelessWidget {
@@ -31,7 +32,7 @@ class QRPayment extends StatelessWidget {
             ),
           ),
           Pinned.fromSize(
-            bounds: Rect.fromLTWH(0.0, 0.0, 414.0, 216.0),
+            bounds: Rect.fromLTWH(0.0, 0.0, 414.0, 183.0),
             size: Size(414.0, 896.0),
             pinLeft: true,
             pinRight: true,
@@ -67,30 +68,24 @@ class QRPayment extends StatelessWidget {
             pinLeft: true,
             pinRight: true,
             fixedHeight: true,
-            child: Container(
-              decoration: BoxDecoration(
-                image: DecorationImage(
-                  image: const AssetImage('assets/images/img15.png'),
-                  fit: BoxFit.cover,
+            child: PageLink(
+              links: [
+                PageLinkInfo(
+                  transition: LinkTransition.Fade,
+                  ease: Curves.easeOut,
+                  duration: 0.3,
+                  pageBuilder: () => PaymentInformation(),
                 ),
-                border: Border.all(width: 1.0, color: const Color(0x00000000)),
+              ],
+              child: Container(
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: const AssetImage('assets/images/img15.png'),
+                    fit: BoxFit.cover,
+                  ),
+                  border: Border.all(width: 1.0, color: const Color(0x00000000)),
+                ),
               ),
-            ),
-          ),
-          Pinned.fromSize(
-            bounds: Rect.fromLTWH(32.0, 613.0, 80.0, 27.0),
-            size: Size(414.0, 896.0),
-            pinLeft: true,
-            fixedWidth: true,
-            fixedHeight: true,
-            child: Text(
-              'Hi Missel',
-              style: TextStyle(
-                fontFamily: 'Segoe UI',
-                fontSize: 20,
-                color: const Color(0xff655757),
-              ),
-              textAlign: TextAlign.left,
             ),
           ),
           Pinned.fromSize(
@@ -100,10 +95,10 @@ class QRPayment extends StatelessWidget {
             fixedWidth: true,
             fixedHeight: true,
             child: Text(
-              'This is the QR Code that we made specifically\nfor you.',
+              'Hi Missel, This is the QR Code that we made specifically for you.',
               style: TextStyle(
                 fontFamily: 'Segoe UI',
-                fontSize: 15,
+                fontSize: 13,
                 color: const Color(0xff655757),
               ),
               textAlign: TextAlign.left,
@@ -120,7 +115,7 @@ class QRPayment extends StatelessWidget {
               TextSpan(
                 style: TextStyle(
                   fontFamily: 'Segoe UI',
-                  fontSize: 16,
+                  fontSize: 15,
                   color: const Color(0xff655757),
                 ),
                 children: [
@@ -134,7 +129,7 @@ class QRPayment extends StatelessWidget {
                     text:
                         '1. Give this phone to cashier.\n2. They will scan QR Code\n3. You payment have done \n',
                     style: TextStyle(
-                      fontSize: 15,
+                      fontSize: 13,
                     ),
                   ),
                 ],
@@ -143,7 +138,7 @@ class QRPayment extends StatelessWidget {
             ),
           ),
           Pinned.fromSize(
-            bounds: Rect.fromLTWH(122.0, 243.0, 190.0, 27.0),
+            bounds: Rect.fromLTWH(122.0, 235.0, 190.0, 27.0),
             size: Size(414.0, 896.0),
             fixedWidth: true,
             fixedHeight: true,
@@ -151,14 +146,14 @@ class QRPayment extends StatelessWidget {
               'Receipt #3920003919',
               style: TextStyle(
                 fontFamily: 'Segoe UI',
-                fontSize: 20,
+                fontSize: 18,
                 color: const Color(0xff655757),
               ),
               textAlign: TextAlign.left,
             ),
           ),
           Pinned.fromSize(
-            bounds: Rect.fromLTWH(105.0, 578.0, 205.0, 17.0),
+            bounds: Rect.fromLTWH(105.0, 590.0, 205.0, 17.0),
             size: Size(414.0, 896.0),
             fixedWidth: true,
             fixedHeight: true,

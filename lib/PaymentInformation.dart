@@ -72,7 +72,7 @@ class PaymentInformation extends StatelessWidget {
               'You have successfully \nconfirmed \nthe payment, for further\n information you can \ncontact the driver\'s \nnumber',
               style: TextStyle(
                 fontFamily: 'Segoe UI',
-                fontSize: 30,
+                fontSize: 25,
                 color: const Color(0xffffffff),
               ),
               textAlign: TextAlign.center,
@@ -112,7 +112,7 @@ class PaymentInformation extends StatelessWidget {
               '+62 812 345 6787',
               style: TextStyle(
                 fontFamily: 'Segoe UI',
-                fontSize: 30,
+                fontSize: 25,
                 color: const Color(0xfffff1f1),
               ),
               textAlign: TextAlign.center,
@@ -139,7 +139,7 @@ class PaymentInformation extends StatelessWidget {
               'PAYMENT',
               style: TextStyle(
                 fontFamily: 'Segoe UI',
-                fontSize: 30,
+                fontSize: 28,
                 color: const Color(0xb8707070),
               ),
               textAlign: TextAlign.center,

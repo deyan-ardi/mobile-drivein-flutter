@@ -136,7 +136,7 @@ class ReviewPage extends StatelessWidget {
                     child: Container(
                       decoration: BoxDecoration(
                         image: DecorationImage(
-                          image: const AssetImage(''),
+                          image: const AssetImage('assets/images/star2.png'),
                           fit: BoxFit.cover,
                         ),
                         border: Border.all(
@@ -153,7 +153,7 @@ class ReviewPage extends StatelessWidget {
                     child: Container(
                       decoration: BoxDecoration(
                         image: DecorationImage(
-                          image: const AssetImage(''),
+                          image: const AssetImage('assets/images/star2.png'),
                           fit: BoxFit.cover,
                         ),
                         border: Border.all(
@@ -170,7 +170,7 @@ class ReviewPage extends StatelessWidget {
                     child: Container(
                       decoration: BoxDecoration(
                         image: DecorationImage(
-                          image: const AssetImage(''),
+                          image: const AssetImage('assets/images/star2.png'),
                           fit: BoxFit.cover,
                         ),
                         border: Border.all(
@@ -187,7 +187,7 @@ class ReviewPage extends StatelessWidget {
                     child: Container(
                       decoration: BoxDecoration(
                         image: DecorationImage(
-                          image: const AssetImage(''),
+                          image: const AssetImage('assets/images/star2.png'),
                           fit: BoxFit.cover,
                         ),
                         border: Border.all(
@@ -205,7 +205,7 @@ class ReviewPage extends StatelessWidget {
                     child: Container(
                       decoration: BoxDecoration(
                         image: DecorationImage(
-                          image: const AssetImage(''),
+                          image: const AssetImage('assets/images/star2.png'),
                           fit: BoxFit.cover,
                         ),
                         border: Border.all(
@@ -254,7 +254,7 @@ class ReviewPage extends StatelessWidget {
               height: 42.0,
               decoration: BoxDecoration(
                 image: DecorationImage(
-                  image: const AssetImage(''),
+                  image: const AssetImage('assets/images/comment.png'),
                   fit: BoxFit.cover,
                 ),
                 border: Border.all(width: 1.0, color: const Color(0x00000000)),
@@ -283,8 +283,12 @@ class ReviewPage extends StatelessWidget {
               allowDrawingOutsideViewBox: true,
             ),
           ),
-          Transform.translate(
-            offset: Offset(157.0, 725.0),
+          Pinned.fromSize(
+            bounds: Rect.fromLTWH(61.0, 735.0, 300.0, 55.0),
+            size: Size(414.0, 896.0),
+            pinLeft: true,
+            pinRight: true,
+            fixedHeight: true,
             child: PageLink(
               links: [
                 PageLinkInfo(
@@ -294,37 +298,38 @@ class ReviewPage extends StatelessWidget {
                   pageBuilder: () => Home(),
                 ),
               ],
-              child: SvgPicture.string(
-                _svg_jls8df,
-                allowDrawingOutsideViewBox: true,
-              ),
-            ),
-          ),
-          Transform.translate(
-            offset: Offset(177.0, 733.0),
-            child: SizedBox(
-              width: 60.0,
-              child: Text(
-                'SEND',
-                style: TextStyle(
-                  fontFamily: 'Segoe UI',
-                  fontSize: 20,
-                  color: const Color(0xffffffff),
-                  fontWeight: FontWeight.w600,
+              child: Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(5.0),
+                  color: const Color(0xff254da1),
+                  border:
+                      Border.all(width: 1.0, color: const Color(0xff707070)),
                 ),
-                textAlign: TextAlign.center,
               ),
             ),
           ),
-          Transform.translate(
-            offset: Offset(-17.5, 832.5),
-            child: SvgPicture.string(
-              _svg_f5t1ao,
-              allowDrawingOutsideViewBox: true,
+          Pinned.fromSize(
+            bounds: Rect.fromLTWH(90.0, 745.0, 240.0, 40.0),
+            size: Size(414.0, 896.0),
+            fixedWidth: true,
+            fixedHeight: true,
+            child: Text(
+              'SEND',
+              style: TextStyle(
+                fontFamily: 'Segoe UI',
+                fontSize: 25,
+                color: const Color(0xfffff1f1),
+              ),
+              textAlign: TextAlign.center,
             ),
           ),
-          Transform.translate(
-            offset: Offset(28.0, 852.0),
+          Pinned.fromSize(
+            bounds: Rect.fromLTWH(28.0, 852.0, 30.0, 23.3),
+            size: Size(414.0, 896.0),
+            pinLeft: true,
+            pinBottom: true,
+            fixedWidth: true,
+            fixedHeight: true,
             child:
                 // Adobe XD layer: 'Icon awesome-home' (shape)
                 PageLink(
@@ -339,11 +344,17 @@ class ReviewPage extends StatelessWidget {
               child: SvgPicture.string(
                 _svg_culyom,
                 allowDrawingOutsideViewBox: true,
+                fit: BoxFit.fill,
               ),
             ),
           ),
-          Transform.translate(
-            offset: Offset(356.0, 852.0),
+          Pinned.fromSize(
+            bounds: Rect.fromLTWH(356.0, 852.0, 25.0, 25.0),
+            size: Size(414.0, 896.0),
+            pinRight: true,
+            pinBottom: true,
+            fixedWidth: true,
+            fixedHeight: true,
             child:
                 // Adobe XD layer: 'Icon ionic-ios-sett…' (shape)
                 PageLink(
@@ -358,11 +369,16 @@ class ReviewPage extends StatelessWidget {
               child: SvgPicture.string(
                 _svg_es5xpn,
                 allowDrawingOutsideViewBox: true,
+                fit: BoxFit.fill,
               ),
             ),
           ),
-          Transform.translate(
-            offset: Offset(195.0, 850.0),
+          Pinned.fromSize(
+            bounds: Rect.fromLTWH(195.0, 850.0, 25.0, 31.3),
+            size: Size(414.0, 896.0),
+            pinBottom: true,
+            fixedWidth: true,
+            fixedHeight: true,
             child:
                 // Adobe XD layer: 'Icon ionic-ios-noti…' (group)
                 PageLink(
@@ -374,38 +390,34 @@ class ReviewPage extends StatelessWidget {
                   pageBuilder: () => NotificationPage(),
                 ),
               ],
-              child: SizedBox(
-                width: 25.0,
-                height: 31.0,
-                child: Stack(
-                  children: <Widget>[
-                    Pinned.fromSize(
-                      bounds: Rect.fromLTWH(9.1, 27.5, 6.8, 3.7),
-                      size: Size(25.0, 31.3),
-                      pinBottom: true,
-                      fixedWidth: true,
-                      fixedHeight: true,
-                      child: SvgPicture.string(
-                        _svg_bpi3jr,
-                        allowDrawingOutsideViewBox: true,
-                        fit: BoxFit.fill,
-                      ),
+              child: Stack(
+                children: <Widget>[
+                  Pinned.fromSize(
+                    bounds: Rect.fromLTWH(9.1, 27.5, 6.8, 3.7),
+                    size: Size(25.0, 31.3),
+                    pinBottom: true,
+                    fixedWidth: true,
+                    fixedHeight: true,
+                    child: SvgPicture.string(
+                      _svg_bpi3jr,
+                      allowDrawingOutsideViewBox: true,
+                      fit: BoxFit.fill,
                     ),
-                    Pinned.fromSize(
-                      bounds: Rect.fromLTWH(0.0, 0.0, 25.0, 26.2),
-                      size: Size(25.0, 31.3),
-                      pinLeft: true,
-                      pinRight: true,
-                      pinTop: true,
-                      pinBottom: true,
-                      child: SvgPicture.string(
-                        _svg_x6p204,
-                        allowDrawingOutsideViewBox: true,
-                        fit: BoxFit.fill,
-                      ),
+                  ),
+                  Pinned.fromSize(
+                    bounds: Rect.fromLTWH(0.0, 0.0, 25.0, 26.2),
+                    size: Size(25.0, 31.3),
+                    pinLeft: true,
+                    pinRight: true,
+                    pinTop: true,
+                    pinBottom: true,
+                    child: SvgPicture.string(
+                      _svg_x6p204,
+                      allowDrawingOutsideViewBox: true,
+                      fit: BoxFit.fill,
                     ),
-                  ],
-                ),
+                  ),
+                ],
               ),
             ),
           ),
@@ -438,10 +450,6 @@ const String _svg_c9ddt2 =
     '<svg viewBox="616.8 153.2 75.8 95.8" ><path transform="translate(80.41, 70.49)" d="M 586.111328125 138.7030029296875 C 596.4026489257813 134.1713104248047 603.599609375 123.9015426635742 603.599609375 111.9341049194336 C 603.599609375 95.77878570556641 590.5029907226563 82.68902587890625 574.347412109375 82.68902587890625 C 558.1990356445313 82.68902587890625 545.1026611328125 95.77878570556641 545.1026611328125 111.9341049194336 C 545.1026611328125 123.9015426635742 552.2994384765625 134.1713104248047 562.5906982421875 138.7030029296875 C 549.3045043945313 145.3109893798828 536.43212890625 161.0384063720703 536.43212890625 173.4617767333984 C 536.43212890625 189.6100616455078 558.1990356445313 161.5084228515625 574.347412109375 161.5084228515625 C 590.5029907226563 161.5084228515625 612.2701416015625 189.6100616455078 612.2701416015625 173.4617767333984 C 612.2701416015625 161.0384063720703 599.3977661132813 145.3109893798828 586.111328125 138.7030029296875 Z" fill="#0b1246" stroke="none" stroke-width="1" stroke-miterlimit="10" stroke-linecap="butt" /></svg>';
 const String _svg_p8u5dm =
     '<svg viewBox="113.5 619.5 235.0 1.0" ><path transform="translate(113.5, 619.5)" d="M 0 0 L 235 0" fill="none" stroke="#707070" stroke-width="1" stroke-miterlimit="4" stroke-linecap="butt" /></svg>';
-const String _svg_jls8df =
-    '<svg viewBox="157.0 725.0 100.0 42.0" ><path transform="translate(157.0, 725.0)" d="M 5 0 L 95 0 C 97.76142120361328 0 100 2.238576173782349 100 5 L 100 37 C 100 39.76142501831055 97.76142120361328 42 95 42 L 5 42 C 2.238576173782349 42 0 39.76142501831055 0 37 L 0 5 C 0 2.238576173782349 2.238576173782349 0 5 0 Z" fill="#254da1" stroke="#707070" stroke-width="1" stroke-miterlimit="4" stroke-linecap="butt" /></svg>';
-const String _svg_f5t1ao =
-    '<svg viewBox="-17.5 832.5 432.0 1.0" ><defs><filter id="shadow"><feDropShadow dx="0" dy="3" stdDeviation="6"/></filter></defs><path transform="translate(-17.5, 832.5)" d="M 0 0 L 432 0" fill="none" stroke="#e4e4e4" stroke-width="1" stroke-miterlimit="4" stroke-linecap="butt" filter="url(#shadow)"/></svg>';
 const String _svg_culyom =
     '<svg viewBox="28.0 852.0 30.0 23.3" ><path transform="translate(28.0, 849.75)" d="M 14.6011905670166 8.305649757385254 L 4.999332427978516 16.21388816833496 L 4.999332427978516 24.7491626739502 C 4.999332427978516 25.20936393737793 5.37239933013916 25.58243179321289 5.832600593566895 25.58243179321289 L 11.66860485076904 25.56732940673828 C 12.12717914581299 25.56503868103027 12.49771404266357 25.19264030456543 12.49770832061768 24.73406028747559 L 12.49770832061768 19.74955177307129 C 12.49770832061768 19.28935050964355 12.870774269104 18.91628265380859 13.33097648620605 18.91628265380859 L 16.6640510559082 18.91628265380859 C 17.12425231933594 18.91628265380859 17.49731826782227 19.28935050964355 17.49731826782227 19.74955177307129 L 17.49731826782227 24.73041343688965 C 17.49662780761719 24.95186042785645 17.58411026000977 25.16447448730469 17.74045372009277 25.32131004333496 C 17.89679908752441 25.47813987731934 18.10913848876953 25.56628608703613 18.33058738708496 25.56628608703613 L 24.16450881958008 25.58243179321289 C 24.62471008300781 25.58243179321289 24.99777793884277 25.20936393737793 24.99777793884277 24.7491626739502 L 24.99777793884277 16.20816040039063 L 15.39800357818604 8.305649757385254 C 15.16546726226807 8.118213653564453 14.83372688293457 8.118213653564453 14.6011905670166 8.305649757385254 Z M 29.76823997497559 13.68075275421143 L 25.4144115447998 10.09196949005127 L 25.4144115447998 2.878467082977295 C 25.4144115447998 2.533315658569336 25.13461303710938 2.253515720367432 24.78946113586426 2.253515720367432 L 21.87302017211914 2.253515720367432 C 21.52786827087402 2.253515720367432 21.24806785583496 2.533316135406494 21.24806785583496 2.878467559814453 L 21.24806785583496 6.6599440574646 L 16.58541107177734 2.823783874511719 C 15.66260528564453 2.064407348632813 14.33138179779053 2.064407348632813 13.4085750579834 2.823783874511719 L 0.2257447987794876 13.68075275421143 C -0.04040739312767982 13.90073490142822 -0.07772185653448105 14.29487133026123 0.1424181163311005 14.56089401245117 L 1.470439672470093 16.17535018920898 C 1.575864791870117 16.30354309082031 1.727953553199768 16.3845329284668 1.893162965774536 16.40045738220215 C 2.058372259140015 16.41637992858887 2.223130464553833 16.36593437194824 2.35110068321228 16.26024055480957 L 14.6011905670166 6.170399188995361 C 14.83372688293457 5.982963562011719 15.16546726226807 5.982963562011719 15.39800453186035 6.17039966583252 L 27.64861488342285 16.26024055480957 C 27.91463661193848 16.48037910461426 28.30877494812012 16.44306373596191 28.52875518798828 16.17691230773926 L 29.85677909851074 14.56245517730713 C 29.96238136291504 14.43396663665771 30.01241111755371 14.26868343353271 29.99579620361328 14.10319995880127 C 29.97917938232422 13.93771362304688 29.89728736877441 13.78567886352539 29.76824569702148 13.68075275421143 Z" fill="#254da1" stroke="none" stroke-width="1" stroke-miterlimit="4" stroke-linecap="butt" /></svg>';
 const String _svg_bpi3jr =

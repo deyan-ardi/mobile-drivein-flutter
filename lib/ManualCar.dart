@@ -270,7 +270,7 @@ class ManualCar extends StatelessWidget {
               'PAKET 1',
               style: TextStyle(
                 fontFamily: 'Segoe UI',
-                fontSize: 20,
+                fontSize: 18,
                 color: const Color(0xb8707070),
               ),
               textAlign: TextAlign.center,
@@ -318,7 +318,7 @@ class ManualCar extends StatelessWidget {
               'PAKET 2',
               style: TextStyle(
                 fontFamily: 'Segoe UI',
-                fontSize: 20,
+                fontSize: 18,
                 color: const Color(0xb8707070),
               ),
               textAlign: TextAlign.center,
@@ -367,25 +367,25 @@ class ManualCar extends StatelessWidget {
               'PAKET 3',
               style: TextStyle(
                 fontFamily: 'Segoe UI',
-                fontSize: 20,
+                fontSize: 18,
                 color: const Color(0xb8707070),
               ),
               textAlign: TextAlign.center,
             ),
           ),
           Pinned.fromSize(
-            bounds: Rect.fromLTWH(94.0, 345.0, 120.0, 27.0),
+            bounds: Rect.fromLTWH(125.0, 345.0, 120.0, 27.0),
             size: Size(414.0, 896.0),
             fixedWidth: true,
             fixedHeight: true,
             child: Text(
-              '      Rp 50.000',
+              'Rp 50.000',
               style: TextStyle(
                 fontFamily: 'Segoe UI',
-                fontSize: 20,
+                fontSize: 18,
                 color: const Color(0xffffffff),
               ),
-              textAlign: TextAlign.center,
+              textAlign: TextAlign.left,
             ),
           ),
           Pinned.fromSize(
@@ -397,29 +397,30 @@ class ManualCar extends StatelessWidget {
               '1 x 60 Menit',
               style: TextStyle(
                 fontFamily: 'Segoe UI',
-                fontSize: 20,
+                fontSize: 18,
                 color: const Color(0xffffffff),
               ),
-              textAlign: TextAlign.center,
+              textAlign: TextAlign.left,
             ),
           ),
+          
           Pinned.fromSize(
-            bounds: Rect.fromLTWH(90.0, 513.0, 180.0, 27.0),
+            bounds: Rect.fromLTWH(125.0, 513.0, 180.0, 27.0),
             size: Size(414.0, 896.0),
             fixedWidth: true,
             fixedHeight: true,
             child: Text(
-              '      Rp 150.000 ( 3x )',
+              'Rp 150.000 ( 3x )',
               style: TextStyle(
                 fontFamily: 'Segoe UI',
-                fontSize: 20,
+                fontSize: 18,
                 color: const Color(0xffffffff),
               ),
-              textAlign: TextAlign.center,
+              textAlign: TextAlign.left,
             ),
           ),
           Pinned.fromSize(
-            bounds: Rect.fromLTWH(121.0, 547.0, 110.0, 27.0),
+            bounds: Rect.fromLTWH(125.0, 547.0, 110.0, 27.0),
             size: Size(414.0, 896.0),
             fixedWidth: true,
             fixedHeight: true,
@@ -427,25 +428,25 @@ class ManualCar extends StatelessWidget {
               '1 x 70 Menit',
               style: TextStyle(
                 fontFamily: 'Segoe UI',
-                fontSize: 20,
+                fontSize: 18,
                 color: const Color(0xffffffff),
               ),
-              textAlign: TextAlign.center,
+              textAlign: TextAlign.left,
             ),
           ),
           Pinned.fromSize(
-            bounds: Rect.fromLTWH(94.0, 681.0, 180.0, 27.0),
+            bounds: Rect.fromLTWH(125.0, 681.0, 180.0, 27.0),
             size: Size(414.0, 896.0),
             fixedWidth: true,
             fixedHeight: true,
             child: Text(
-              '      Rp 250.000 ( 5x )',
+              'Rp 250.000 ( 5x )',
               style: TextStyle(
                 fontFamily: 'Segoe UI',
-                fontSize: 20,
+                fontSize: 18,
                 color: const Color(0xffffffff),
               ),
-              textAlign: TextAlign.center,
+              textAlign: TextAlign.left,
             ),
           ),
           Pinned.fromSize(
@@ -457,14 +458,14 @@ class ManualCar extends StatelessWidget {
               '1 x 80 Menit',
               style: TextStyle(
                 fontFamily: 'Segoe UI',
-                fontSize: 20,
+                fontSize: 18,
                 color: const Color(0xffffffff),
               ),
-              textAlign: TextAlign.center,
+              textAlign: TextAlign.left,
             ),
           ),
           Pinned.fromSize(
-            bounds: Rect.fromLTWH(88.0, 353.0, 10.0, 17.8),
+            bounds: Rect.fromLTWH(85.0, 348.0, 10.0, 17.8),
             size: Size(414.0, 896.0),
             fixedWidth: true,
             fixedHeight: true,
@@ -477,7 +478,7 @@ class ManualCar extends StatelessWidget {
             ),
           ),
           Pinned.fromSize(
-            bounds: Rect.fromLTWH(85.0, 387.0, 15.0, 15.0),
+            bounds: Rect.fromLTWH(85.0, 384.0, 15.0, 15.0),
             size: Size(414.0, 896.0),
             fixedWidth: true,
             fixedHeight: true,
@@ -514,7 +515,7 @@ class ManualCar extends StatelessWidget {
             ),
           ),
           Pinned.fromSize(
-            bounds: Rect.fromLTWH(88.0, 520.0, 10.0, 17.8),
+            bounds: Rect.fromLTWH(85.0, 515.0, 10.0, 17.8),
             size: Size(414.0, 896.0),
             fixedWidth: true,
             fixedHeight: true,
@@ -527,7 +528,7 @@ class ManualCar extends StatelessWidget {
             ),
           ),
           Pinned.fromSize(
-            bounds: Rect.fromLTWH(85.0, 554.0, 15.0, 15.0),
+            bounds: Rect.fromLTWH(85.0, 550.0, 15.0, 15.0),
             size: Size(414.0, 896.0),
             fixedWidth: true,
             fixedHeight: true,
@@ -564,7 +565,7 @@ class ManualCar extends StatelessWidget {
             ),
           ),
           Pinned.fromSize(
-            bounds: Rect.fromLTWH(88.0, 688.0, 10.0, 17.8),
+            bounds: Rect.fromLTWH(85.0, 684.0, 10.0, 17.8),
             size: Size(414.0, 896.0),
             fixedWidth: true,
             fixedHeight: true,
@@ -577,7 +578,7 @@ class ManualCar extends StatelessWidget {
             ),
           ),
           Pinned.fromSize(
-            bounds: Rect.fromLTWH(85.0, 722.0, 15.0, 15.0),
+            bounds: Rect.fromLTWH(85.0, 732.0, 15.0, 15.0),
             size: Size(414.0, 896.0),
             pinBottom: true,
             fixedWidth: true,
