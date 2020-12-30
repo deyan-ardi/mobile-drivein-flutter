@@ -30,16 +30,16 @@ dependencies:
   cupertino_icons: ^1.0.0
   adobe_xd: ^1.0.0+1
   qrcode: ^1.0.4
-  qr_flutter: any
+  qr_flutter: ^3.2.0
   google_maps_flutter: ^0.5.11
   location: ^2.3.5
   http: ^0.12.2
-  shared_preferences: ^0.4.3
+  shared_preferences: ^0.5.12+4
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_launcher_icons: "^0.7.0"
+  flutter_launcher_icons: "^0.8.0"
 
 flutter_icons:
   ios: true

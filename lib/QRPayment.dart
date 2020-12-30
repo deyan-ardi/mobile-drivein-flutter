@@ -90,8 +90,7 @@ class QRPaymentState extends State<QRPayment> {
                   pageBuilder: () => PaymentInformation(),
                 ),
               ],
-              child: Expanded(
-                child: Center(
+              child:  Center(
                   child: RepaintBoundary(
                     key: globalKey,
                     child: QrImage(
@@ -103,7 +102,6 @@ class QRPaymentState extends State<QRPayment> {
                 ),
               ),
             ),
-          ),
           Pinned.fromSize(
             bounds: Rect.fromLTWH(32.0, 651.0, 299.0, 40.0),
             size: Size(414.0, 896.0),
