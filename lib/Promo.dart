@@ -24,6 +24,7 @@ class PromoState extends State<Promo> {
 
   @override
   void initState() {
+    // ignore: todo
     // TODO: implement initState
     super.initState();
     getPref();

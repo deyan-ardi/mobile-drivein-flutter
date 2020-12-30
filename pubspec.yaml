@@ -33,7 +33,7 @@ dependencies:
   qr_flutter: any
   google_maps_flutter: ^0.5.11
   location: ^2.3.5
-  http:
+  http: ^0.12.2
   shared_preferences: ^0.4.3
 
 dev_dependencies:
