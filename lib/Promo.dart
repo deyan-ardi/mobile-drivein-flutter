@@ -1,18 +1,37 @@
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import './Home.dart';
 import 'package:adobe_xd/page_link.dart';
 import './Profile.dart';
 import './NotificationPage.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class Promo extends StatelessWidget {
-  Promo({
-    Key key,
-  }) : super(key: key);
+class Promo extends StatefulWidget {
+  @override
+  State<StatefulWidget> createState() => PromoState();
+}
+
+String fullname = "";
+
+class PromoState extends State<Promo> {
+  getPref() async {
+    SharedPreferences preferences = await SharedPreferences.getInstance();
+    setState(() {
+      fullname = preferences.getString("fullname");
+    });
+  }
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    getPref();
+  }
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+     return Scaffold(
       backgroundColor: const Color(0xffffffff),
       body: Stack(
         children: <Widget>[
@@ -35,14 +54,14 @@ class Promo extends StatelessWidget {
             ),
           ),
           Pinned.fromSize(
-            bounds: Rect.fromLTWH(19.0, 29.0, 128.0, 33.0),
+            bounds: Rect.fromLTWH(19.0, 29.0, 250.0, 33.0),
             size: Size(414.0, 896.0),
             pinLeft: true,
             pinTop: true,
             fixedWidth: true,
             fixedHeight: true,
             child: Text(
-              'Hey Missel,',
+              'Hey $fullname,',
               style: TextStyle(
                 fontFamily: 'Segoe UI',
                 fontSize: 20,
@@ -88,14 +107,13 @@ class Promo extends StatelessWidget {
                   child: Stack(
                     children: <Widget>[
                       Container(
-                          decoration: BoxDecoration(
-                            image: DecorationImage(
-                              image: const AssetImage('assets/images/img25.png'),
-                              fit: BoxFit.fill,
-                            ),
+                        decoration: BoxDecoration(
+                          image: DecorationImage(
+                            image: const AssetImage('assets/images/img25.png'),
+                            fit: BoxFit.fill,
                           ),
                         ),
-                      
+                      ),
                       Pinned.fromSize(
                         bounds: Rect.fromLTWH(0.0, 0.0, 132.0, 132.0),
                         size: Size(132.0, 132.0),
@@ -130,7 +148,7 @@ class Promo extends StatelessWidget {
               ),
             ),
           ),
-           Pinned.fromSize(
+          Pinned.fromSize(
             bounds: Rect.fromLTWH(97.0, 215.0, 64.0, 30.0),
             size: Size(414.0, 896.0),
             fixedWidth: true,
@@ -145,7 +163,7 @@ class Promo extends StatelessWidget {
               textAlign: TextAlign.center,
             ),
           ),
-         Pinned.fromSize(
+          Pinned.fromSize(
             bounds: Rect.fromLTWH(58.0, 210.0, 33.0, 33.0),
             size: Size(414.0, 896.0),
             pinLeft: true,
@@ -460,6 +478,7 @@ class Promo extends StatelessWidget {
     );
   }
 }
+
 
 const String _svg_culyom =
     '<svg viewBox="28.0 852.0 30.0 23.3" ><path transform="translate(28.0, 849.75)" d="M 14.6011905670166 8.305649757385254 L 4.999332427978516 16.21388816833496 L 4.999332427978516 24.7491626739502 C 4.999332427978516 25.20936393737793 5.37239933013916 25.58243179321289 5.832600593566895 25.58243179321289 L 11.66860485076904 25.56732940673828 C 12.12717914581299 25.56503868103027 12.49771404266357 25.19264030456543 12.49770832061768 24.73406028747559 L 12.49770832061768 19.74955177307129 C 12.49770832061768 19.28935050964355 12.870774269104 18.91628265380859 13.33097648620605 18.91628265380859 L 16.6640510559082 18.91628265380859 C 17.12425231933594 18.91628265380859 17.49731826782227 19.28935050964355 17.49731826782227 19.74955177307129 L 17.49731826782227 24.73041343688965 C 17.49662780761719 24.95186042785645 17.58411026000977 25.16447448730469 17.74045372009277 25.32131004333496 C 17.89679908752441 25.47813987731934 18.10913848876953 25.56628608703613 18.33058738708496 25.56628608703613 L 24.16450881958008 25.58243179321289 C 24.62471008300781 25.58243179321289 24.99777793884277 25.20936393737793 24.99777793884277 24.7491626739502 L 24.99777793884277 16.20816040039063 L 15.39800357818604 8.305649757385254 C 15.16546726226807 8.118213653564453 14.83372688293457 8.118213653564453 14.6011905670166 8.305649757385254 Z M 29.76823997497559 13.68075275421143 L 25.4144115447998 10.09196949005127 L 25.4144115447998 2.878467082977295 C 25.4144115447998 2.533315658569336 25.13461303710938 2.253515720367432 24.78946113586426 2.253515720367432 L 21.87302017211914 2.253515720367432 C 21.52786827087402 2.253515720367432 21.24806785583496 2.533316135406494 21.24806785583496 2.878467559814453 L 21.24806785583496 6.6599440574646 L 16.58541107177734 2.823783874511719 C 15.66260528564453 2.064407348632813 14.33138179779053 2.064407348632813 13.4085750579834 2.823783874511719 L 0.2257447987794876 13.68075275421143 C -0.04040739312767982 13.90073490142822 -0.07772185653448105 14.29487133026123 0.1424181163311005 14.56089401245117 L 1.470439672470093 16.17535018920898 C 1.575864791870117 16.30354309082031 1.727953553199768 16.3845329284668 1.893162965774536 16.40045738220215 C 2.058372259140015 16.41637992858887 2.223130464553833 16.36593437194824 2.35110068321228 16.26024055480957 L 14.6011905670166 6.170399188995361 C 14.83372688293457 5.982963562011719 15.16546726226807 5.982963562011719 15.39800453186035 6.17039966583252 L 27.64861488342285 16.26024055480957 C 27.91463661193848 16.48037910461426 28.30877494812012 16.44306373596191 28.52875518798828 16.17691230773926 L 29.85677909851074 14.56245517730713 C 29.96238136291504 14.43396663665771 30.01241111755371 14.26868343353271 29.99579620361328 14.10319995880127 C 29.97917938232422 13.93771362304688 29.89728736877441 13.78567886352539 29.76824569702148 13.68075275421143 Z" fill="#254da1" stroke="none" stroke-width="1" stroke-miterlimit="4" stroke-linecap="butt" /></svg>';

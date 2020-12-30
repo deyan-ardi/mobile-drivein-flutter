@@ -1,14 +1,42 @@
+import 'package:drivtech_project/LoginPage.dart';
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import './Home.dart';
 import 'package:adobe_xd/page_link.dart';
 import './NotificationPage.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import './LoginPage.dart';
 
-class Profile extends StatelessWidget {
-  Profile({
-    Key key,
-  }) : super(key: key);
+class Profile extends StatefulWidget {
+  @override
+  _ProfileState createState() => _ProfileState();
+}
+
+enum LoginStatus { notSignIn, signIn }
+
+String fullname = "", email = "", age = "", address = "", phoneNumber = "";
+
+class _ProfileState extends State<Profile> {
+  getPref() async {
+    SharedPreferences preferences = await SharedPreferences.getInstance();
+    setState(() {
+      fullname = preferences.getString("fullname");
+      email = preferences.getString("email");
+      age = preferences.getString("age");
+      address = preferences.getString("address");
+      phoneNumber = preferences.getString("phoneNumber");
+    });
+  }
+
+  @override
+  void initState() {
+    // ignore: todo
+    // TODO: implement initState
+    super.initState();
+    getPref();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -55,14 +83,14 @@ class Profile extends StatelessWidget {
             child: Stack(
               children: <Widget>[
                 Pinned.fromSize(
-                  bounds: Rect.fromLTWH(1.0, 0.0, 88.0, 24.0),
+                  bounds: Rect.fromLTWH(1.0, 0.0, 250.0, 24.0),
                   size: Size(300.5, 242.5),
                   pinLeft: true,
                   pinTop: true,
                   fixedWidth: true,
                   fixedHeight: true,
                   child: Text(
-                    'Your Name',
+                    '$fullname',
                     style: TextStyle(
                       fontFamily: 'Segoe UI',
                       fontSize: 17,
@@ -72,13 +100,13 @@ class Profile extends StatelessWidget {
                   ),
                 ),
                 Pinned.fromSize(
-                  bounds: Rect.fromLTWH(0.0, 66.0, 72.0, 24.0),
+                  bounds: Rect.fromLTWH(0.0, 66.0, 250.0, 24.0),
                   size: Size(300.5, 242.5),
                   pinLeft: true,
                   fixedWidth: true,
                   fixedHeight: true,
                   child: Text(
-                    'Your Age',
+                    '$age Years Old',
                     style: TextStyle(
                       fontFamily: 'Segoe UI',
                       fontSize: 17,
@@ -125,13 +153,13 @@ class Profile extends StatelessWidget {
                   ),
                 ),
                 Pinned.fromSize(
-                  bounds: Rect.fromLTWH(1.0, 131.0, 64.0, 24.0),
+                  bounds: Rect.fromLTWH(1.0, 131.0, 250.0, 24.0),
                   size: Size(300.5, 242.5),
                   pinLeft: true,
                   fixedWidth: true,
                   fixedHeight: true,
                   child: Text(
-                    'Address',
+                    '$address',
                     style: TextStyle(
                       fontFamily: 'Segoe UI',
                       fontSize: 17,
@@ -141,7 +169,7 @@ class Profile extends StatelessWidget {
                   ),
                 ),
                 Pinned.fromSize(
-                  bounds: Rect.fromLTWH(0.5, 241.5, 300.0, 1.0),
+                  bounds: Rect.fromLTWH(0.5, 305.5, 300.0, 1.0),
                   size: Size(300.5, 242.5),
                   pinLeft: true,
                   pinRight: true,
@@ -154,20 +182,49 @@ class Profile extends StatelessWidget {
                   ),
                 ),
                 Pinned.fromSize(
-                  bounds: Rect.fromLTWH(0.0, 205.0, 120.0, 24.0),
+                  bounds: Rect.fromLTWH(0.0, 205.0, 250.0, 24.0),
                   size: Size(300.5, 242.5),
                   pinLeft: true,
                   pinBottom: true,
                   fixedWidth: true,
                   fixedHeight: true,
                   child: Text(
-                    'Phone Number',
+                    '$phoneNumber',
                     style: TextStyle(
                       fontFamily: 'Segoe UI',
                       fontSize: 17,
                       color: const Color(0xffaaa7a7),
                     ),
                     textAlign: TextAlign.left,
+                  ),
+                ),
+                Pinned.fromSize(
+                  bounds: Rect.fromLTWH(0.0, 270.0, 250.0, 24.0),
+                  size: Size(300.5, 242.5),
+                  pinLeft: true,
+                  fixedWidth: true,
+                  fixedHeight: true,
+                  child: Text(
+                    '$email',
+                    style: TextStyle(
+                      fontFamily: 'Segoe UI',
+                      fontSize: 17,
+                      color: const Color(0xffafadad),
+                    ),
+                    textAlign: TextAlign.left,
+                  ),
+                ),
+                Pinned.fromSize(
+                  bounds: Rect.fromLTWH(1.5, 241.5, 300.0, 1.0),
+                  size: Size(300.5, 242.5),
+                  pinLeft: true,
+                  pinRight: true,
+                  pinTop: true,
+                  fixedHeight: true,
+                  child: SvgPicture.string(
+                    _svg_ecl5k2,
+                    allowDrawingOutsideViewBox: true,
+                    fit: BoxFit.fill,
                   ),
                 ),
               ],
@@ -190,14 +247,14 @@ class Profile extends StatelessWidget {
                   pinBottom: true,
                   child: Stack(
                     children: <Widget>[
-                       Container(
-                          decoration: BoxDecoration(
-                            image: DecorationImage(
-                              image: const AssetImage('assets/images/img25.png'),
-                              fit: BoxFit.fill,
-                            ),
+                      Container(
+                        decoration: BoxDecoration(
+                          image: DecorationImage(
+                            image: const AssetImage('assets/images/img25.png'),
+                            fit: BoxFit.fill,
                           ),
                         ),
+                      ),
                       Pinned.fromSize(
                         bounds: Rect.fromLTWH(0.0, 0.0, 167.0, 167.0),
                         size: Size(167.0, 167.0),
@@ -254,26 +311,6 @@ class Profile extends StatelessWidget {
             ),
           ),
           Pinned.fromSize(
-            bounds: Rect.fromLTWH(140.0, 662.0, 135.0, 41.0),
-            size: Size(414.0, 896.0),
-            fixedWidth: true,
-            fixedHeight: true,
-            child: Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(30.0),
-                color: const Color(0x8cffffff),
-                border: Border.all(width: 1.0, color: const Color(0x8c707070)),
-                boxShadow: [
-                  BoxShadow(
-                    color: const Color(0x17000000),
-                    offset: Offset(0, 3),
-                    blurRadius: 6,
-                  ),
-                ],
-              ),
-            ),
-          ),
-          Pinned.fromSize(
             bounds: Rect.fromLTWH(28.0, 852.0, 30.0, 23.3),
             size: Size(414.0, 896.0),
             pinLeft: true,
@@ -293,6 +330,31 @@ class Profile extends StatelessWidget {
               ],
               child: SvgPicture.string(
                 _svg_culyom,
+                allowDrawingOutsideViewBox: true,
+                fit: BoxFit.fill,
+              ),
+            ),
+          ),
+          Pinned.fromSize(
+            bounds: Rect.fromLTWH(356.0, 852.0, 25.0, 25.0),
+            size: Size(414.0, 896.0),
+            pinRight: true,
+            pinBottom: true,
+            fixedWidth: true,
+            fixedHeight: true,
+            child:
+                // Adobe XD layer: 'Icon ionic-ios-sett…' (shape)
+                PageLink(
+              links: [
+                PageLinkInfo(
+                  transition: LinkTransition.Fade,
+                  ease: Curves.easeOut,
+                  duration: 0.3,
+                  pageBuilder: () => Profile(),
+                ),
+              ],
+              child: SvgPicture.string(
+                _svg_es5xpn,
                 allowDrawingOutsideViewBox: true,
                 fit: BoxFit.fill,
               ),
@@ -347,44 +409,26 @@ class Profile extends StatelessWidget {
             ),
           ),
           Pinned.fromSize(
-            bounds: Rect.fromLTWH(356.0, 852.0, 25.0, 25.0),
-            size: Size(414.0, 896.0),
-            pinRight: true,
-            pinBottom: true,
-            fixedWidth: true,
-            fixedHeight: true,
-            child:
-                // Adobe XD layer: 'Icon ionic-ios-sett…' (shape)
-              SvgPicture.string(
-              _svg_es5xpn,
-              allowDrawingOutsideViewBox: true,
-              fit: BoxFit.fill,
-            ),
-          ),
-          Pinned.fromSize(
-            bounds: Rect.fromLTWH(190.0, 671.0, 38.0, 24.0),
+            bounds: Rect.fromLTWH(140.0, 750.0, 135.0, 41.0),
             size: Size(414.0, 896.0),
             fixedWidth: true,
             fixedHeight: true,
-            child: 
-            PageLink(
-              links: [
-                PageLinkInfo(
-                  transition: LinkTransition.Fade,
-                  ease: Curves.easeOut,
-                  duration: 0.3,
-                  pageBuilder: () => Home(),
-                ),
-              ],
-            child: Text(
-              'Save',
-              style: TextStyle(
-                fontFamily: 'Segoe UI',
-                fontSize: 17,
-                color: const Color(0xffafadad),
+            child: RaisedButton(
+              onPressed: () async {
+                SharedPreferences prefs = await SharedPreferences.getInstance();
+                prefs.remove('value');
+                Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(
+                        builder: (BuildContext ctx) => LoginPage()));
+                setState(() {
+                });
+              },
+              child: Text(
+                "Logout",
+                style: TextStyle(color: Colors.white, fontSize: 18),
               ),
-              textAlign: TextAlign.center,
-            ),
+              color: Colors.blue,
             ),
           ),
         ],
@@ -395,6 +439,9 @@ class Profile extends StatelessWidget {
 
 const String _svg_ecl5kb =
     '<svg viewBox="48.5 437.5 300.0 1.0" ><defs><filter id="shadow"><feDropShadow dx="0" dy="3" stdDeviation="6"/></filter></defs><path transform="translate(48.5, 437.5)" d="M 0 1 L 300 0" fill="none" stroke="#707070" stroke-width="1" stroke-miterlimit="4" stroke-linecap="butt" filter="url(#shadow)"/></svg>';
+const String _svg_ecl5k2 =
+    '<svg viewBox="48.5 437.5 300.0 1.0" ><defs><filter id="shadow"><feDropShadow dx="0" dy="3" stdDeviation="6"/></filter></defs><path transform="translate(48.5, 437.5)" d="M 0 1 L 300 0" fill="none" stroke="#707070" stroke-width="1" stroke-miterlimit="4" stroke-linecap="butt" filter="url(#shadow)"/></svg>';
+
 const String _svg_n5l1n9 =
     '<svg viewBox="48.5 503.5 300.0 1.0" ><defs><filter id="shadow"><feDropShadow dx="0" dy="3" stdDeviation="6"/></filter></defs><path transform="translate(48.5, 503.5)" d="M 0 1 L 300 0" fill="none" stroke="#707070" stroke-width="1" stroke-miterlimit="4" stroke-linecap="butt" filter="url(#shadow)"/></svg>';
 const String _svg_7bb6nf =

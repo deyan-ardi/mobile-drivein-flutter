@@ -5,6 +5,7 @@ import 'package:http/http.dart' as http;
 import './CreateAccount.dart';
 import './Home.dart';
 import 'package:adobe_xd/blend_mask.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class LoginPage extends StatefulWidget {
   @override
@@ -43,9 +44,15 @@ class LoginPageState extends State<LoginPage> {
     final data = jsonDecode(response.body);
     int value = data['value'];
     String message = data['message'];
+    String fullnameUser = data['name'];
+    String emailUser = data['email'];
+    String ageUser = data['age'];
+    String addressUser = data['address'];
+    String phoneNumberUser = data['phone_number'];
     if (value == 1) {
       setState(() {
         _loginStatus = LoginStatus.signIn;
+        savePref(value,fullnameUser,emailUser,ageUser,addressUser,phoneNumberUser);
       });
       print(message);
     } else {
@@ -53,7 +60,50 @@ class LoginPageState extends State<LoginPage> {
     }
   }
 
+  savePref(int value, String name, String email, String age, String address, String phoneNumber) async {
+    SharedPreferences preferences = await SharedPreferences.getInstance();
+    setState(() {
+      preferences.setInt("value", value);
+      preferences.setString("fullname", name);
+      preferences.setString("email", email);
+      preferences.setString("age", age);
+      preferences.setString("address", address);
+      preferences.setString("phoneNumber", phoneNumber);
+
+      // ignore: deprecated_member_use
+      preferences.commit();
+    });
+  }
+
+  var value;
+  getPref() async {
+    SharedPreferences preferences = await SharedPreferences.getInstance();
+    setState(() {
+      value = preferences.getInt("value");
+      _loginStatus = value == 1 ? LoginStatus.signIn : LoginStatus.notSignIn;
+    });
+  }
+
   @override
+  void initState() {
+    // ignore: todo
+    // TODO: implement initState
+    super.initState();
+    getPref();
+  }
+
+  signOut() async {
+    SharedPreferences preferences = await SharedPreferences.getInstance();
+    setState(() {
+      preferences.setInt("value", null);
+      // ignore: deprecated_member_use
+      preferences.commit();
+      _loginStatus = LoginStatus.notSignIn;
+    });
+  }
+
+  @override
+  // ignore: missing_return
   Widget build(BuildContext context) {
     switch (_loginStatus) {
       case LoginStatus.notSignIn:

@@ -149,7 +149,7 @@ class Mentor extends StatelessWidget {
               'REVIEW EXPERIENCE',
               style: TextStyle(
                 fontFamily: 'Segoe UI',
-                fontSize: 22,
+                fontSize: 20,
                 color: const Color(0xff797272),
               ),
               textAlign: TextAlign.center,

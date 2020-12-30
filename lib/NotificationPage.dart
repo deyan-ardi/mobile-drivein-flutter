@@ -1,17 +1,37 @@
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import './Home.dart';
 import 'package:adobe_xd/page_link.dart';
 import './Profile.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class NotificationPage extends StatelessWidget {
-  NotificationPage({
-    Key key,
-  }) : super(key: key);
+class NotificationPage extends StatefulWidget {
+  @override
+  State<StatefulWidget> createState() => NotificationPageState();
+}
+
+String fullname = "";
+
+class NotificationPageState extends State<NotificationPage> {
+  getPref() async {
+    SharedPreferences preferences = await SharedPreferences.getInstance();
+    setState(() {
+      fullname = preferences.getString("fullname");
+    });
+  }
+
+  @override
+  void initState() {
+    // ignore: todo
+    // TODO: implement initState
+    super.initState();
+    getPref();
+  }
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+  return Scaffold(
       backgroundColor: const Color(0xffffffff),
       body: Stack(
         children: <Widget>[
@@ -138,7 +158,8 @@ class NotificationPage extends StatelessWidget {
                         child: Container(
                           decoration: BoxDecoration(
                             image: DecorationImage(
-                              image: const AssetImage('assets/images/img25.png'),
+                              image:
+                                  const AssetImage('assets/images/img25.png'),
                               fit: BoxFit.fill,
                             ),
                           ),
@@ -180,15 +201,15 @@ class NotificationPage extends StatelessWidget {
               textAlign: TextAlign.left,
             ),
           ),
-         Pinned.fromSize(
-            bounds: Rect.fromLTWH(19.0, 29.0, 128.0, 33.0),
+          Pinned.fromSize(
+            bounds: Rect.fromLTWH(19.0, 29.0, 250.0, 33.0),
             size: Size(414.0, 896.0),
             pinLeft: true,
             pinTop: true,
             fixedWidth: true,
             fixedHeight: true,
             child: Text(
-              'Hey Missel,',
+              'Hey $fullname,',
               style: TextStyle(
                 fontFamily: 'Segoe UI',
                 fontSize: 20,
@@ -249,7 +270,7 @@ class NotificationPage extends StatelessWidget {
               ],
             ),
           ),
-            Pinned.fromSize(
+          Pinned.fromSize(
             bounds: Rect.fromLTWH(38.0, 200.0, 335.0, 57.0),
             size: Size(414.0, 896.0),
             pinLeft: true,
@@ -426,6 +447,8 @@ class NotificationPage extends StatelessWidget {
     );
   }
 }
+
+
 
 const String _svg_4oi0f5 =
     '<svg viewBox="0.0 0.0 414.0 216.0" ><path  d="M 0 0 L 414 0 L 414 186 C 414 202.5685424804688 400.5685424804688 216 384 216 L 30 216 C 13.43145751953125 216 0 202.5685424804688 0 186 L 0 0 Z" fill="#254da1" stroke="#707070" stroke-width="1" stroke-miterlimit="4" stroke-linecap="butt" /></svg>';

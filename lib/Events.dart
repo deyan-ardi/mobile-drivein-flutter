@@ -1,15 +1,35 @@
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import './Home.dart';
 import 'package:adobe_xd/page_link.dart';
 import './Profile.dart';
 import './NotificationPage.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class Events extends StatelessWidget {
-  Events({
-    Key key,
-  }) : super(key: key);
+class Events extends StatefulWidget {
+  @override
+  State<StatefulWidget> createState() => EventState();
+}
+
+String fullname = "";
+
+class EventState extends State<Events> {
+  getPref() async {
+    SharedPreferences preferences = await SharedPreferences.getInstance();
+    setState(() {
+      fullname = preferences.getString("fullname");
+    });
+  }
+
+  @override
+  void initState() {
+    // ignore: todo
+    // TODO: implement initState
+    super.initState();
+    getPref();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,15 +54,15 @@ class Events extends StatelessWidget {
               ),
             ),
           ),
-       Pinned.fromSize(
-            bounds: Rect.fromLTWH(19.0, 29.0, 128.0, 33.0),
+          Pinned.fromSize(
+            bounds: Rect.fromLTWH(19.0, 29.0, 250.0, 33.0),
             size: Size(414.0, 896.0),
             pinLeft: true,
             pinTop: true,
             fixedWidth: true,
             fixedHeight: true,
             child: Text(
-              'Hey Missel,',
+              'Hey $fullname,',
               style: TextStyle(
                 fontFamily: 'Segoe UI',
                 fontSize: 20,
@@ -88,14 +108,13 @@ class Events extends StatelessWidget {
                   child: Stack(
                     children: <Widget>[
                       Container(
-                          decoration: BoxDecoration(
-                            image: DecorationImage(
-                              image: const AssetImage('assets/images/img25.png'),
-                              fit: BoxFit.fill,
-                            ),
+                        decoration: BoxDecoration(
+                          image: DecorationImage(
+                            image: const AssetImage('assets/images/img25.png'),
+                            fit: BoxFit.fill,
                           ),
                         ),
-                      
+                      ),
                       Pinned.fromSize(
                         bounds: Rect.fromLTWH(0.0, 0.0, 132.0, 132.0),
                         size: Size(132.0, 132.0),
@@ -116,7 +135,7 @@ class Events extends StatelessWidget {
               ],
             ),
           ),
-         Pinned.fromSize(
+          Pinned.fromSize(
             bounds: Rect.fromLTWH(38.0, 200.0, 335.0, 57.0),
             size: Size(414.0, 896.0),
             pinLeft: true,
@@ -130,7 +149,7 @@ class Events extends StatelessWidget {
               ),
             ),
           ),
-           Pinned.fromSize(
+          Pinned.fromSize(
             bounds: Rect.fromLTWH(97.0, 215.0, 64.0, 30.0),
             size: Size(414.0, 896.0),
             fixedWidth: true,
@@ -145,7 +164,7 @@ class Events extends StatelessWidget {
               textAlign: TextAlign.center,
             ),
           ),
-         Pinned.fromSize(
+          Pinned.fromSize(
             bounds: Rect.fromLTWH(58.0, 210.0, 33.0, 33.0),
             size: Size(414.0, 896.0),
             pinLeft: true,
@@ -421,6 +440,7 @@ class Events extends StatelessWidget {
     );
   }
 }
+
 
 const String _svg_izsjcu =
     '<svg viewBox="0.5 828.5 432.0 1.0" ><defs><filter id="shadow"><feDropShadow dx="0" dy="3" stdDeviation="6"/></filter></defs><path transform="translate(0.5, 828.5)" d="M 0 0 L 432 0" fill="none" stroke="#e4e4e4" stroke-width="1" stroke-miterlimit="4" stroke-linecap="butt" filter="url(#shadow)"/></svg>';

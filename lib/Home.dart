@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import './DrivingCourse.dart';
 import 'package:adobe_xd/page_link.dart';
 import './Nearby.dart';
@@ -10,10 +11,29 @@ import './PaymentMethod.dart';
 import './NotificationPage.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class Home extends StatelessWidget {
-  Home({
-    Key key,
-  }) : super(key: key);
+class Home extends StatefulWidget {
+  @override
+  State<StatefulWidget> createState() => HomeState();
+}
+
+String fullname = "";
+
+class HomeState extends State<Home> {
+  getPref() async {
+    SharedPreferences preferences = await SharedPreferences.getInstance();
+    setState(() {
+      fullname = preferences.getString("fullname");
+    });
+  }
+
+  @override
+  void initState() {
+    // ignore: todo
+    // TODO: implement initState
+    super.initState();
+    getPref();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -452,14 +472,14 @@ class Home extends StatelessWidget {
             ),
           ),
           Pinned.fromSize(
-            bounds: Rect.fromLTWH(19.0, 29.0, 128.0, 33.0),
+            bounds: Rect.fromLTWH(19.0, 29.0, 250.0, 33.0),
             size: Size(414.0, 896.0),
             pinLeft: true,
             pinTop: true,
             fixedWidth: true,
             fixedHeight: true,
             child: Text(
-              'Hey Missel,',
+              'Hey $fullname,',
               style: TextStyle(
                 fontFamily: 'Segoe UI',
                 fontSize: 20,

@@ -1,10 +1,5 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
-import 'package:adobe_xd/pinned.dart';
-import './GoogleLogin.dart';
-import 'package:adobe_xd/page_link.dart';
-import './LoginPage.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:http/http.dart' as http;
 
 class CreateAccount extends StatefulWidget {
@@ -13,7 +8,7 @@ class CreateAccount extends StatefulWidget {
 }
 
 class CreateAccountState extends State<CreateAccount> {
-  String fullname, email, password, passwordConfirm;
+  String fullname, email, password, passwordConfirm, age, address, phoneNumber;
   final _key = new GlobalKey<FormState>();
 
   check() {
@@ -30,10 +25,21 @@ class CreateAccountState extends State<CreateAccount> {
       "fullname": fullname,
       "email": email,
       "password": password,
-      "password_confirm": passwordConfirm
+      "password_confirm": passwordConfirm,
+      "age": age,
+      "address": address,
+      "phone_number": phoneNumber
     });
     final data = jsonDecode(response.body);
-    print(data);
+    int value = data['value'];
+    String message = data['message'];
+    if (value == 1) {
+      setState(() {
+        Navigator.pop(context);
+      });
+    } else {
+      print(message);
+    }
   }
 
   @override
@@ -142,6 +148,67 @@ class CreateAccountState extends State<CreateAccount> {
             ),
           ),
           SizedBox(
+            height: 30,
+          ),
+          TextFormField(
+            // ignore: missing_return
+            keyboardType: TextInputType.number,
+            // ignore: missing_return
+            validator: (e) {
+              if (e.isEmpty) {
+                return "Please Insert Your Age";
+              }
+            },
+            onSaved: (e) => age = e,
+            decoration: new InputDecoration(
+              hintText: "Input Your Age",
+              labelText: "Age",
+              icon: Icon(Icons.height),
+              border: OutlineInputBorder(
+                  borderRadius: new BorderRadius.circular(5.0)),
+            ),
+          ),
+          SizedBox(
+            height: 30,
+          ),
+          TextFormField(
+            // ignore: missing_return
+            validator: (e) {
+              if (e.isEmpty) {
+                return "Please Insert Your Address";
+              }
+            },
+            onSaved: (e) => address = e,
+            decoration: new InputDecoration(
+              hintText: "Input Your Address",
+              labelText: "Address",
+              icon: Icon(Icons.location_city),
+              border: OutlineInputBorder(
+                  borderRadius: new BorderRadius.circular(5.0)),
+            ),
+          ),
+          SizedBox(
+            height: 30,
+          ),
+          TextFormField(
+            // ignore: missing_return
+            keyboardType: TextInputType.number,
+            // ignore: missing_return
+            validator: (e) {
+              if (e.isEmpty) {
+                return "Please Insert Your Phone Number";
+              }
+            },
+            onSaved: (e) => phoneNumber = e,
+            decoration: new InputDecoration(
+              hintText: "Input Your Phone Number",
+              labelText: "Phone Number",
+              icon: Icon(Icons.phone),
+              border: OutlineInputBorder(
+                  borderRadius: new BorderRadius.circular(5.0)),
+            ),
+          ),
+          SizedBox(
             height: 16,
           ),
           RaisedButton(
@@ -156,23 +223,7 @@ class CreateAccountState extends State<CreateAccount> {
             },
           ),
           SizedBox(
-            height: 16,
-          ),
-          Text(
-            '------- or connect with -------',
-            style: TextStyle(
-              fontFamily: 'Segoe UI',
-              fontSize: 16,
-              color: const Color(0xff9b8383),
-              shadows: [
-                Shadow(
-                  color: const Color(0x29000000),
-                  offset: Offset(0, 3),
-                  blurRadius: 6,
-                )
-              ],
-            ),
-            textAlign: TextAlign.center,
+            height: 50,
           ),
         ]),
       ),
