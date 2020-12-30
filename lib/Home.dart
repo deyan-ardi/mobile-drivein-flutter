@@ -347,7 +347,7 @@ class Home extends StatelessWidget {
             child: Container(
               decoration: BoxDecoration(
                 image: DecorationImage(
-                  image: const AssetImage('assets/images/img8.png'),
+                  image: const AssetImage('assets/images/img7.png'),
                   fit: BoxFit.cover,
                 ),
                 border: Border.all(width: 1.0, color: const Color(0x00000000)),
@@ -363,7 +363,7 @@ class Home extends StatelessWidget {
             child: Container(
               decoration: BoxDecoration(
                 image: DecorationImage(
-                  image: const AssetImage('assets/images/img7.png'),
+                  image: const AssetImage('assets/images/img8.png'),
                   fit: BoxFit.cover,
                 ),
                 border: Border.all(width: 1.0, color: const Color(0x00000000)),

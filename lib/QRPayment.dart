@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
 import './Home.dart';
@@ -7,13 +9,24 @@ import './NotificationPage.dart';
 import './PaymentMethod.dart';
 import './PaymentInformation.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:qr_flutter/qr_flutter.dart';
+import 'package:flutter/rendering.dart';
 
-class QRPayment extends StatelessWidget {
-  QRPayment({
-    Key key,
-  }) : super(key: key);
+class QRPayment extends StatefulWidget {
+  @override
+  State<StatefulWidget> createState() => QRPaymentState();
+}
+
+class QRPaymentState extends State<QRPayment> {
+  GlobalKey globalKey = new GlobalKey();
+ 
   @override
   Widget build(BuildContext context) {
+    final bodyHeight = MediaQuery.of(context).size.height -
+        MediaQuery.of(context).viewInsets.bottom;
+    var randomNumber = new Random();
+    int randomFinal = randomNumber.nextInt(1000000000);
+    String _dataString = "#"+ randomFinal.toString();
     return Scaffold(
       backgroundColor: const Color(0xffffffff),
       body: Stack(
@@ -77,13 +90,16 @@ class QRPayment extends StatelessWidget {
                   pageBuilder: () => PaymentInformation(),
                 ),
               ],
-              child: Container(
-                decoration: BoxDecoration(
-                  image: DecorationImage(
-                    image: const AssetImage('assets/images/img15.png'),
-                    fit: BoxFit.cover,
+              child: Expanded(
+                child: Center(
+                  child: RepaintBoundary(
+                    key: globalKey,
+                    child: QrImage(
+                      data: _dataString,
+                      size: 0.5 * bodyHeight,
+                      backgroundColor: Colors.white,
+                    ),
                   ),
-                  border: Border.all(width: 1.0, color: const Color(0x00000000)),
                 ),
               ),
             ),
@@ -143,7 +159,7 @@ class QRPayment extends StatelessWidget {
             fixedWidth: true,
             fixedHeight: true,
             child: Text(
-              'Receipt #3920003919',
+              'Receipt $_dataString',
               style: TextStyle(
                 fontFamily: 'Segoe UI',
                 fontSize: 18,
@@ -307,6 +323,15 @@ class QRPayment extends StatelessWidget {
     );
   }
 }
+// class QRPayment extends StatelessWidget {
+//   QRPayment({
+//     Key key,
+//   }) : super(key: key);
+//   @override
+//   Widget build(BuildContext context) {
+
+//   }
+// }
 
 const String _svg_izsjcu =
     '<svg viewBox="0.5 828.5 432.0 1.0" ><defs><filter id="shadow"><feDropShadow dx="0" dy="3" stdDeviation="6"/></filter></defs><path transform="translate(0.5, 828.5)" d="M 0 0 L 432 0" fill="none" stroke="#e4e4e4" stroke-width="1" stroke-miterlimit="4" stroke-linecap="butt" filter="url(#shadow)"/></svg>';

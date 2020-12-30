@@ -29,6 +29,12 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.0
   adobe_xd: ^1.0.0+1
+  qrcode: ^1.0.4
+  qr_flutter: any
+  google_maps_flutter: ^0.5.11
+  location: ^2.3.5
+  http:
+  shared_preferences: ^0.4.3
 
 dev_dependencies:
   flutter_test:
@@ -79,6 +85,8 @@ flutter:
     - assets/images/nearby1.png
     - assets/images/nearby2.png
     - assets/images/nearby3.png
+    - assets/images/car_icon.png
+    - assets/images/logo3.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
